@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Login1
 {
-    public partial class Form1 : Form
+    public partial class ViewLogin : Form
     {
-        public Form1()
+        public ViewLogin()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace Login1
 
         private void signupbutton_Click(object sender, EventArgs e)
         {
-            Registar registar = new Registar();
+            ViewRegistar registar = new ViewRegistar();
             registar.ShowDialog();
         }
 
@@ -41,6 +41,24 @@ namespace Login1
             if (textboxUsername.Text == "")
             {
                 textboxUsername.Text = "Username";
+            }
+        }
+
+        private void textboxPassword_Enter(object sender, EventArgs e)
+        {
+            if (textboxPassword.Text == "Password")
+            {
+                textboxPassword.Text = "";
+                textboxPassword.isPassword = true;
+            }
+        }
+
+        private void textboxPassword_Leave(object sender, EventArgs e)
+        {
+            if (textboxPassword.Text == "")
+            {
+                textboxPassword.isPassword = false;
+                textboxPassword.Text = "Password";
             }
         }
     }

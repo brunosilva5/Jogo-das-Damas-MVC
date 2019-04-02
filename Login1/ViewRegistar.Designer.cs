@@ -1,6 +1,6 @@
 ﻿namespace Login1
 {
-    partial class Registar
+    partial class ViewRegistar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRegistar));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboboxPaises = new Bunifu.Framework.UI.BunifuDropdown();
@@ -129,7 +129,7 @@
             this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
             this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(370, 44);
             this.bunifuMaterialTextbox3.TabIndex = 3;
-            this.bunifuMaterialTextbox3.Text = "Username";
+            this.bunifuMaterialTextbox3.Text = "Confirm Password";
             this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuMaterialTextbox2
@@ -150,7 +150,7 @@
             this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
             this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(370, 44);
             this.bunifuMaterialTextbox2.TabIndex = 2;
-            this.bunifuMaterialTextbox2.Text = "Username";
+            this.bunifuMaterialTextbox2.Text = "Password";
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuMaterialTextbox1
@@ -174,15 +174,16 @@
             this.bunifuMaterialTextbox1.Text = "Username";
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuMaterialTextbox1.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
+            this.bunifuMaterialTextbox1.Enter += new System.EventHandler(this.UsernameEnter);
             // 
-            // Registar
+            // ViewRegistar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 580);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Registar";
+            this.Name = "ViewRegistar";
             this.Text = "Registar";
             this.bunifuGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.backbutton)).EndInit();

@@ -1,6 +1,6 @@
 ﻿namespace Login1
 {
-    partial class Form1
+    partial class ViewLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewLogin));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.loginbutton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.signupbutton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.closelogin = new System.Windows.Forms.PictureBox();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.textboxPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.textboxUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -49,7 +49,7 @@
             this.bunifuGradientPanel1.Controls.Add(this.signupbutton);
             this.bunifuGradientPanel1.Controls.Add(this.closelogin);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuTileButton1);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuMaterialTextbox2);
+            this.bunifuGradientPanel1.Controls.Add(this.textboxPassword);
             this.bunifuGradientPanel1.Controls.Add(this.textboxUsername);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton1);
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Black;
@@ -69,7 +69,7 @@
             this.loginbutton.ActiveFillColor = System.Drawing.Color.Silver;
             this.loginbutton.ActiveForecolor = System.Drawing.Color.White;
             this.loginbutton.ActiveLineColor = System.Drawing.Color.White;
-            this.loginbutton.BackColor = System.Drawing.SystemColors.Control;
+            this.loginbutton.BackColor = System.Drawing.Color.Transparent;
             this.loginbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("loginbutton.BackgroundImage")));
             this.loginbutton.ButtonText = "LOGIN";
             this.loginbutton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -94,7 +94,7 @@
             this.signupbutton.ActiveFillColor = System.Drawing.Color.Transparent;
             this.signupbutton.ActiveForecolor = System.Drawing.Color.Transparent;
             this.signupbutton.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.signupbutton.BackColor = System.Drawing.SystemColors.Control;
+            this.signupbutton.BackColor = System.Drawing.Color.Transparent;
             this.signupbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("signupbutton.BackgroundImage")));
             this.signupbutton.ButtonText = "Sign up";
             this.signupbutton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -144,25 +144,27 @@
             this.bunifuTileButton1.Size = new System.Drawing.Size(128, 129);
             this.bunifuTileButton1.TabIndex = 2;
             // 
-            // bunifuMaterialTextbox2
+            // textboxPassword
             // 
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox2.HintText = "";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.Black;
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.Black;
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(233, 356);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(370, 44);
-            this.bunifuMaterialTextbox2.TabIndex = 2;
-            this.bunifuMaterialTextbox2.Text = "Password";
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textboxPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textboxPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textboxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textboxPassword.HintForeColor = System.Drawing.Color.Empty;
+            this.textboxPassword.HintText = "";
+            this.textboxPassword.isPassword = false;
+            this.textboxPassword.LineFocusedColor = System.Drawing.Color.Black;
+            this.textboxPassword.LineIdleColor = System.Drawing.Color.Gray;
+            this.textboxPassword.LineMouseHoverColor = System.Drawing.Color.Black;
+            this.textboxPassword.LineThickness = 3;
+            this.textboxPassword.Location = new System.Drawing.Point(233, 356);
+            this.textboxPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.textboxPassword.Name = "textboxPassword";
+            this.textboxPassword.Size = new System.Drawing.Size(370, 44);
+            this.textboxPassword.TabIndex = 2;
+            this.textboxPassword.Text = "Password";
+            this.textboxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textboxPassword.Enter += new System.EventHandler(this.textboxPassword_Enter);
+            this.textboxPassword.Leave += new System.EventHandler(this.textboxPassword_Leave);
             // 
             // textboxUsername
             // 
@@ -184,8 +186,8 @@
             this.textboxUsername.TabIndex = 1;
             this.textboxUsername.Text = "Username";
             this.textboxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.textboxUsername.MouseEnter += new System.EventHandler(this.UsernameEnter);
-            this.textboxUsername.MouseLeave += new System.EventHandler(this.UsernameLeave);
+            this.textboxUsername.Enter += new System.EventHandler(this.UsernameEnter);
+            this.textboxUsername.Leave += new System.EventHandler(this.UsernameLeave);
             // 
             // bunifuFlatButton1
             // 
@@ -243,7 +245,7 @@
 
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox textboxPassword;
         private Bunifu.Framework.UI.BunifuMaterialTextbox textboxUsername;
         private System.Windows.Forms.PictureBox closelogin;
         private Bunifu.Framework.UI.BunifuThinButton2 signupbutton;

@@ -15,13 +15,13 @@ namespace Login1
 {
     
 
-    public partial class Registar : Form
+    public partial class ViewRegistar : Form
     {
         List<string> cultureList = new List<string>();
         CultureInfo[] cultures = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
         RegionInfo region;
 
-        public Registar()
+        public ViewRegistar()
         {
             InitializeComponent();
         }
@@ -59,6 +59,11 @@ namespace Login1
         private void comboboxPaises_onItemSelected(object sender, EventArgs e)
         {
             
+        }
+
+        private void UsernameEnter(object sender, EventArgs e)
+        {
+
         }
     }
 }
