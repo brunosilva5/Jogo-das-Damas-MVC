@@ -86,6 +86,7 @@
             this.loginbutton.Size = new System.Drawing.Size(181, 41);
             this.loginbutton.TabIndex = 3;
             this.loginbutton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.loginbutton.Click += new System.EventHandler(this.loginbutton_Click);
             // 
             // signupbutton
             // 
@@ -142,7 +143,7 @@
             this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuTileButton1.Name = "bunifuTileButton1";
             this.bunifuTileButton1.Size = new System.Drawing.Size(128, 129);
-            this.bunifuTileButton1.TabIndex = 2;
+            this.bunifuTileButton1.TabIndex = 0;
             // 
             // textboxPassword
             // 
@@ -226,14 +227,14 @@
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // Form1
+            // ViewLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 580);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "ViewLogin";
             this.Text = "Form1";
             this.bunifuGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.closelogin)).EndInit();

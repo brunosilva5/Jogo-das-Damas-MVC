@@ -17,10 +17,6 @@ namespace Login1
             InitializeComponent();
         }
 
-        private void closelogin_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void signupbutton_Click(object sender, EventArgs e)
         {
@@ -28,6 +24,14 @@ namespace Login1
             registar.ShowDialog();
         }
 
+        private void loginbutton_Click(object sender, EventArgs e)
+        {
+            ViewJogo jogar = new ViewJogo();
+            jogar.ShowDialog();
+        }
+
+
+        //-----------------------------------------------------------
         private void UsernameEnter(object sender, EventArgs e)
         {
             if (textboxUsername.Text == "Username")
@@ -61,5 +65,16 @@ namespace Login1
                 textboxPassword.Text = "Password";
             }
         }
+        //-----------------------------------------------------------
+
+
+
+
+
+        private void closelogin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

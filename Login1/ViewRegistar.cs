@@ -14,7 +14,6 @@ using System.Globalization;
 namespace Login1
 {
     
-
     public partial class ViewRegistar : Form
     {
         List<string> cultureList = new List<string>();
@@ -26,20 +25,7 @@ namespace Login1
             InitializeComponent();
         }
 
-        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void backbutton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void bunifuDatepicker1_onValueChanged(object sender, EventArgs e)
-        {
-            
-        }
         private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
             foreach (CultureInfo culture in cultures)
@@ -49,21 +35,74 @@ namespace Login1
                 if (!(cultureList.Contains(region.EnglishName)))
                 {
                     cultureList.Add(region.EnglishName);
+
                     comboBox1.Items.Add(region.EnglishName);
-                    //comboboxPaises.Items.Intersect(0, new ListItem(region.EnglishName);
-                    //comboboxPaises.Items.(region.EnglishName);
+                    
                 }
             }
         }
 
-        private void comboboxPaises_onItemSelected(object sender, EventArgs e)
-        {
-            
-        }
 
+
+        //---------------------------------------------------------------------
         private void UsernameEnter(object sender, EventArgs e)
         {
-
+            if (textboxUsernameRegistar.Text == "Username")
+            {
+                textboxUsernameRegistar.Text = "";
+            }
         }
+        private void UsernameLeave(object sender, EventArgs e)
+        {
+            if (textboxUsernameRegistar.Text == "")
+            {
+                textboxUsernameRegistar.Text = "Username";
+            }
+        }
+        private void textboxPasswordRegistar_Enter(object sender, EventArgs e)
+        {
+            if (textboxPasswordRegistar.Text == "Password")
+            {
+                textboxPasswordRegistar.Text = "";
+                textboxPasswordRegistar.isPassword = true;
+            }
+        }
+        private void textboxPasswordRegistar_Leave(object sender, EventArgs e)
+        {
+            if (textboxPasswordRegistar.Text == "")
+            {
+                textboxPasswordRegistar.isPassword = false;
+                textboxPasswordRegistar.Text = "Password";
+            }
+        }
+        private void textboxConfirmarPassword_Enter(object sender, EventArgs e)
+        {
+            if (textboxConfirmarPassword.Text == "Password")
+            {
+                textboxConfirmarPassword.Text = "";
+                textboxConfirmarPassword.isPassword = true;
+            }
+        }
+
+        private void textboxConfirmarPassword_Leave(object sender, EventArgs e)
+        {
+            if (textboxConfirmarPassword.Text == "")
+            {
+                textboxConfirmarPassword.isPassword = false;
+                textboxConfirmarPassword.Text = "Password";
+            }
+        }
+        //--------------------------------------------------------------------
+
+
+
+
+
+
+        private void backbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }
