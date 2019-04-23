@@ -70,6 +70,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModoJogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModoJogo.Designer.cs">
+      <DependentUpon>ViewModoJogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewRegistar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ViewModoJogo.resx">
+      <DependentUpon>ViewModoJogo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewRegistar.resx">
       <DependentUpon>ViewRegistar.cs</DependentUpon>
     </EmbeddedResource>
