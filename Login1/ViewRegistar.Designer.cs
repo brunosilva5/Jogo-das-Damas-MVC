@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRegistar));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.registarbutton = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboboxPaises = new Bunifu.Framework.UI.BunifuDropdown();
             this.backbutton = new System.Windows.Forms.PictureBox();
@@ -37,9 +40,6 @@
             this.textboxConfirmarPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.textboxPasswordRegistar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.textboxUsernameRegistar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.registarbutton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backbutton)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +69,51 @@
             this.bunifuGradientPanel1.TabIndex = 0;
             this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
             // 
+            // registarbutton
+            // 
+            this.registarbutton.ActiveBorderThickness = 1;
+            this.registarbutton.ActiveCornerRadius = 20;
+            this.registarbutton.ActiveFillColor = System.Drawing.Color.Silver;
+            this.registarbutton.ActiveForecolor = System.Drawing.Color.White;
+            this.registarbutton.ActiveLineColor = System.Drawing.Color.White;
+            this.registarbutton.BackColor = System.Drawing.Color.Transparent;
+            this.registarbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("registarbutton.BackgroundImage")));
+            this.registarbutton.ButtonText = "SIGN UP";
+            this.registarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.registarbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registarbutton.ForeColor = System.Drawing.Color.Silver;
+            this.registarbutton.IdleBorderThickness = 1;
+            this.registarbutton.IdleCornerRadius = 20;
+            this.registarbutton.IdleFillColor = System.Drawing.Color.White;
+            this.registarbutton.IdleForecolor = System.Drawing.Color.Silver;
+            this.registarbutton.IdleLineColor = System.Drawing.Color.DimGray;
+            this.registarbutton.Location = new System.Drawing.Point(333, 457);
+            this.registarbutton.Margin = new System.Windows.Forms.Padding(5);
+            this.registarbutton.Name = "registarbutton";
+            this.registarbutton.Size = new System.Drawing.Size(181, 41);
+            this.registarbutton.TabIndex = 10;
+            this.registarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(237, 410);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(105, 17);
+            this.bunifuCustomLabel2.TabIndex = 9;
+            this.bunifuCustomLabel2.Text = "Nacionalidade";
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(237, 358);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(144, 17);
+            this.bunifuCustomLabel1.TabIndex = 8;
+            this.bunifuCustomLabel1.Text = "Data de Nascimento";
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -85,6 +130,7 @@
             this.comboboxPaises.ForeColor = System.Drawing.Color.Black;
             this.comboboxPaises.Items = new string[0];
             this.comboboxPaises.Location = new System.Drawing.Point(409, 400);
+            this.comboboxPaises.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboboxPaises.Name = "comboboxPaises";
             this.comboboxPaises.NomalColor = System.Drawing.Color.Transparent;
             this.comboboxPaises.onHoverColor = System.Drawing.Color.DarkGray;
@@ -185,51 +231,6 @@
             this.textboxUsernameRegistar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textboxUsernameRegistar.Enter += new System.EventHandler(this.UsernameEnter);
             this.textboxUsernameRegistar.Leave += new System.EventHandler(this.UsernameLeave);
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(237, 358);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(144, 17);
-            this.bunifuCustomLabel1.TabIndex = 8;
-            this.bunifuCustomLabel1.Text = "Data de Nascimento";
-            // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(237, 410);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(105, 17);
-            this.bunifuCustomLabel2.TabIndex = 9;
-            this.bunifuCustomLabel2.Text = "Nacionalidade";
-            // 
-            // registarbutton
-            // 
-            this.registarbutton.ActiveBorderThickness = 1;
-            this.registarbutton.ActiveCornerRadius = 20;
-            this.registarbutton.ActiveFillColor = System.Drawing.Color.Silver;
-            this.registarbutton.ActiveForecolor = System.Drawing.Color.White;
-            this.registarbutton.ActiveLineColor = System.Drawing.Color.White;
-            this.registarbutton.BackColor = System.Drawing.Color.Transparent;
-            this.registarbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("registarbutton.BackgroundImage")));
-            this.registarbutton.ButtonText = "SIGN UP";
-            this.registarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.registarbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registarbutton.ForeColor = System.Drawing.Color.Silver;
-            this.registarbutton.IdleBorderThickness = 1;
-            this.registarbutton.IdleCornerRadius = 20;
-            this.registarbutton.IdleFillColor = System.Drawing.Color.White;
-            this.registarbutton.IdleForecolor = System.Drawing.Color.Silver;
-            this.registarbutton.IdleLineColor = System.Drawing.Color.DimGray;
-            this.registarbutton.Location = new System.Drawing.Point(333, 457);
-            this.registarbutton.Margin = new System.Windows.Forms.Padding(5);
-            this.registarbutton.Name = "registarbutton";
-            this.registarbutton.Size = new System.Drawing.Size(181, 41);
-            this.registarbutton.TabIndex = 10;
-            this.registarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ViewRegistar
             // 

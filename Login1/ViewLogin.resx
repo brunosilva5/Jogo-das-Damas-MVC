@@ -128,25 +128,25 @@
   <data name="loginbutton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAALUAAAApCAYAAABz92iRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJrSURBVHhe7dy/y1JRHMdxx8bGxsb+hMbGxsY2W9KrXvD3
-        VbShSQeDsMVF/wIxHBSaghBMEEwIBxfhQULoUXykMLjPcDvf+5yMeEJq6fHc3i84IN6r08fD95zr94QA
-        AAAAAAD+X+Fw+JZlWY9zuVw/n89/SKVS57FYzGMw/vWQ7EkGVRbfRqPRJ8lk8raO6Z+Lx+MPM5nMptFo
-        7MbjsTefz731eu0BN0GyJxmcTqdeq9X6ks1mtyrYT3Vcj5NfgOM4r2u12na32+mvBE7Lfr/3ms3mhZq5
-        36sJ+I6O73USaHXT2WAwcPVngZM2m828Uql0pkqSuzrGv5IZmkDDNFKWSL2tY/yT1NBScuj7AKO02+2v
-        6XT6uY7z1S6HLAqpoWEq13W9crm8iUQi9/xQyxaJrCj1dcBI/X7/Uk3OL/1Qy96fbJUAJlsul54K9cIP
-        tXrxabVa6UuAmaQESSQSl36obdvey74fYDp5+uiHWl4AQUCoETiEGoFDqBE4hBqBQ6gROIQagUOoETiH
-        UMtTGHkaA5juEGrp/6JVC0FwCLW0xEgHAWAy+f+S/I/JD7Vt2886nc43fQ0w0nA49NQE3fZDLf1dxWJx
-        S10Nk9Xr9QtVfjzyQy0cx3nR7XZpFICRRqORWygU3ug4X5GWLvXmx8VioW8DzCBtiPl8/vNvD7iR/q5S
-        qXROwwBMIYGuVCobVUI/0DG+zrKs+3L2R6/XY+GIkzaZTFyZoY8G+gcpRdTNr6rV6lZWlHSZ41RIh5Yc
-        gyfH4al14Lu/PlNPfgGyRaI+uJNNbQbjpoe0HqpM9uXgUh1TAAAAAACOCYW+Awdx7YyL3EMvAAAAAElF
-        TkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJNSURBVHhe7Zyxy3FhHIa/f9eiLBYDxWCQJCXFYDQoSrEY
+        LAZKUgYGBgPFwGKw/L7u47zn++R87/i9nqfrqrvUwXSd0+8859zPr+v1aoT4FKQm3gWpiXdBauJdkJp4
+        F6Qm3uVbqc/ns00mE2s0GlYqlSyTyVgikSDkv0fuycFarWbj8dhOp1Oss8o/pZ7NZsEfNZtNm8/nttls
+        7HK5GMBPIPfk4HK5tHa7HbgpuePcfZNaZ0Cr1bJqtWq32y38S4DP4n6/B3JXKhU7HA4vDr9ILaHz+bxN
+        p9PwpwCfzXq9tmKxaPv9Pl5qXaERGlxDY4nm7TepNUNr5ABwkV6vZ/1+/4/UWuXQ4M0MDa7yeDysUCjY
+        drt9Sq27SA3dAC4zGo2s0+k8pdban5ZKAFxGqyBa6Aikzmazdjwew0MAbqIRJJlMPqVOpVLBuh+A6+jp
+        YyC1PgD4AFKDdyA1eAdSg3cgNXgHUoN3IDV4B1KDd0RS6ymMnsYAuE4ktd7Qo6oFPhBJrUqMGgQALqP3
+        l/QeUyC1XrBWAFxGrS21twKp1e/K5XLM1eA09Xo9EDuQWul2uzYYDMLDAG6hbTy0P41cjqRWpUvlxd1u
+        F34NwA1UQ9Sk8bXBTSS1on6Xel4UBsAVJHS5XLbFYhF5/CK1slqtgkrMcDgMfwbwmaiCqCv030Irb1Ir
+        GkVUYNQZoMGbljl8CmpoaX7Wdnjq1sbtqRcr9Vd0BmiJJJ1OB4vahPx0VD3UDaE2Lo1zVvlWakJcDFIT
+        74LUxLsgNfEuSE08y9V+Az3zX5iuEyj6AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="signupbutton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAJEAAAAhCAYAAADZEklWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAqSURBVHhe7cExAQAAAMKg9U9tCU8gAAAAAAAAAAAAAAAA
-        AAAAAAAA+KoBSuUAAVX/piEAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABmSURBVHhe7dIxAQAwDASh+lf7DlIRtzLggLftoJCITCIy
+        icgkIpOITCIyicgkIpOITCIyicgkIpOITCIyicgkIpOITCIyicgkIpOITCIyicgkIpOITCIyicgkIpOI
+        TCIyicgkItp9Yy40STvWhOwAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="closelogin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

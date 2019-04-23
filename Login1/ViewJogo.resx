@@ -201,6 +201,27 @@
         d2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAAAAL
 </value>
   </data>
+  <data name="buttonSairMenu.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAfVJREFUeF7t
+        mc1KA0EQhKMXn0RFUC9CTvoK4lt50IPgxf+HE0XQgwc9edEaqIGxJSboTtVC+qMLsh12q7pJlvxMkiRJ
+        kmQ+n6gxibF0xABuMZaOGMAtxtIRA7jFWDrcAdz+uQB3ALd/LsAdwO2fC3AHcPuPbQFPbOsIAVBaGu9H
+        aJ1tHU0A5wKeoR22tDCAcwEP0AYP9dTBq9iWAcMtPvTQDl/Etg0E2IVWeNifOngV2xZgfgR9QHfQKtt9
+        gdEoFgDjQ6gMX7NoltAY2hYA0zXovmZodA71fTsEQ5QHGG9C5bPAtzzQLdTvlRDMUD5gPmsJN1CfJQQj
+        lBcEmLWEa2j4JQQTlB+E+G0Jw94TggFqMeJ5Qp0ywjBEA7bnEs8T64Qx/k+8ONtzieeJdQUN81YIF0Yt
+        RjxPqEtouPtAuDjKD0JModeaqdEZNI6bYC8QQDd8IZigfMBcO3whGKE8wFg/fCGYofTAdNaXoQuo3/CF
+        YIjyAON96K3mgI75VF8aQ+sCCjA/gN4hzfCFMnQrtm0gwHL9JAbDbT700A5fxLYMGJY7/5SHeurgVWzL
+        oO8LtLR/jFTv8krYY1tHE8C9gKKl/nPU4p8LcAdw++cC3AHc/rkAdwC3/48AbjGWjhjALcbSEQO4xVg6
+        YgC3GCtJkiRJ/sxk8gW8LeGciZCLjwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="buttonSettingsJogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAGhJREFUeF7t
+        16ENAwEQA8Hvv+mErEKC/pilmQIsLfQDAAAA/z7jyrhrZ1YZd+3MKuOunVllAAAAvNOnmFXGXTuzyrhr
+        Z1YZd+3MKgMAAOCdPsWsMu7amVXGXTuzyrhrZ1YZAAAA8PM8XwEw93m/NI3QAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="pictureBox8.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAVpJREFUaEPt
@@ -568,27 +589,6 @@
         BuyAAnzi8d5Yv269vz7+c+6lAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAs46uv/h8x5dq2c8TBMQAAAABJ
         RU5ErkJggg==
-</value>
-  </data>
-  <data name="buttonSairMenu.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAfVJREFUeF7t
-        mc1KA0EQhKMXn0RFUC9CTvoK4lt50IPgxf+HE0XQgwc9edEaqIGxJSboTtVC+qMLsh12q7pJlvxMkiRJ
-        kmQ+n6gxibF0xABuMZaOGMAtxtIRA7jFWDrcAdz+uQB3ALd/LsAdwO2fC3AHcPuPbQFPbOsIAVBaGu9H
-        aJ1tHU0A5wKeoR22tDCAcwEP0AYP9dTBq9iWAcMtPvTQDl/Etg0E2IVWeNifOngV2xZgfgR9QHfQKtt9
-        gdEoFgDjQ6gMX7NoltAY2hYA0zXovmZodA71fTsEQ5QHGG9C5bPAtzzQLdTvlRDMUD5gPmsJN1CfJQQj
-        lBcEmLWEa2j4JQQTlB+E+G0Jw94TggFqMeJ5Qp0ywjBEA7bnEs8T64Qx/k+8ONtzieeJdQUN81YIF0Yt
-        RjxPqEtouPtAuDjKD0JModeaqdEZNI6bYC8QQDd8IZigfMBcO3whGKE8wFg/fCGYofTAdNaXoQuo3/CF
-        YIjyAON96K3mgI75VF8aQ+sCCjA/gN4hzfCFMnQrtm0gwHL9JAbDbT700A5fxLYMGJY7/5SHeurgVWzL
-        oO8LtLR/jFTv8krYY1tHE8C9gKKl/nPU4p8LcAdw++cC3AHc/rkAdwC3/48AbjGWjhjALcbSEQO4xVg6
-        YgC3GCtJkiRJ/sxk8gW8LeGciZCLjwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="buttonSettingsJogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAGhJREFUeF7t
-        16ENAwEQA8Hvv+mErEKC/pilmQIsLfQDAAAA/z7jyrhrZ1YZd+3MKuOunVllAAAAvNOnmFXGXTuzyrhr
-        Z1YZd+3MKgMAAOCdPsWsMu7amVXGXTuzyrhrZ1YZAAAA8PM8XwEw93m/NI3QAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

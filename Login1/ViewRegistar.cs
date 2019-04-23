@@ -23,6 +23,7 @@ namespace Login1
         public ViewRegistar()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
 

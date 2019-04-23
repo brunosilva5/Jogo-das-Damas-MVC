@@ -15,6 +15,7 @@ namespace Login1
         public ViewLogin()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
 

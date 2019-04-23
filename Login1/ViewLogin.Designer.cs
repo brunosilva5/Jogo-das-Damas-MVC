@@ -69,7 +69,7 @@
             this.loginbutton.ActiveFillColor = System.Drawing.Color.Silver;
             this.loginbutton.ActiveForecolor = System.Drawing.Color.White;
             this.loginbutton.ActiveLineColor = System.Drawing.Color.White;
-            this.loginbutton.BackColor = System.Drawing.SystemColors.Control;
+            this.loginbutton.BackColor = System.Drawing.Color.Transparent;
             this.loginbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("loginbutton.BackgroundImage")));
             this.loginbutton.ButtonText = "LOGIN";
             this.loginbutton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -95,7 +95,7 @@
             this.signupbutton.ActiveFillColor = System.Drawing.Color.Transparent;
             this.signupbutton.ActiveForecolor = System.Drawing.Color.Transparent;
             this.signupbutton.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.signupbutton.BackColor = System.Drawing.SystemColors.Control;
+            this.signupbutton.BackColor = System.Drawing.Color.Transparent;
             this.signupbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("signupbutton.BackgroundImage")));
             this.signupbutton.ButtonText = "Sign up";
             this.signupbutton.Cursor = System.Windows.Forms.Cursors.Hand;
