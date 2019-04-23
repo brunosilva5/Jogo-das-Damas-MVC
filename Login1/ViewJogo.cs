@@ -12,14 +12,16 @@ namespace Login1
 {
     public partial class ViewJogo : Form
     {
-        PictureBox[,] matriz = new PictureBox[8, 8];
-        Jogo j = new Jogo();
+        /*PictureBox[,] matriz = new PictureBox[8, 8];
+        Jogo j = new Jogo();*/
+
+        PictureBox selecionado = null;
 
         public ViewJogo()
         {
             InitializeComponent();
 
-            matriz[0, 0] = pictureBox1;
+            /*matriz[0, 0] = pictureBox1;
             matriz[0, 1] = pictureBox2;
             matriz[0, 2] = pictureBox3;
             matriz[0, 3] = pictureBox4;
@@ -84,11 +86,48 @@ namespace Login1
             matriz[7, 6] = pictureBox64;
             matriz[7, 7] = pictureBox64;
 
-            DesenhaPecas(j.Tabuleiro);
+            DesenhaPecas(j.Tabuleiro);*/
 
         }
 
-        private void DesenhaPecas(List<Peca> tabuleiro)
+        private void TabClick(object sender, MouseEventArgs e)
+        {
+            
+            Movimento((PictureBox)sender);
+            Selecao(sender);
+        }
+
+        public void Selecao(object obj)
+        {
+            try
+            {
+                selecionado.BackColor = Color.Black;
+            }
+            catch { }
+
+            selecionado = (PictureBox)obj;
+            selecionado.BackColor = Color.Gold;
+        }
+
+        private void Movimento(PictureBox destino)
+        {
+            if (selecionado == null)
+            {
+                return;
+            }
+            destino.BackgroundImage = selecionado.BackgroundImage;
+            selecionado.BackgroundImage = null;
+            
+            if (true) // movimento extra
+            {
+                selecionado.BackColor = Color.Black;
+                selecionado = null;
+
+            }
+        }
+
+
+        /*private void DesenhaPecas(List<Peca> tabuleiro)
         {
             foreach (Peca p in tabuleiro)
             {
@@ -178,7 +217,7 @@ namespace Login1
                 labelL7.Text = "2";
                 labelL8.Text = "1";
             }
-        }
+        }*/
 
 
         //Button Settings
@@ -214,7 +253,7 @@ namespace Login1
 
 
 
-        private void MostraPecaTabuleiro(Peca peca)
+        /*private void MostraPecaTabuleiro(Peca peca)
         {
             PictureBox pp = this.Controls.Find(peca.Posicao, false)[0] as PictureBox;
 
@@ -222,7 +261,7 @@ namespace Login1
                 pp.Image = Image.FromFile("Imagens//clara.png");
             else
                 pp.Image = Image.FromFile("Imagens//escura.png");
-        }
+        }*/
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
