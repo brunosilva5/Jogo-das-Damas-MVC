@@ -22,6 +22,27 @@ namespace Login1
 
         }
 
-        
+        private void closelogin_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void buttonVSComputador_Click(object sender, EventArgs e)
+        {
+            ViewJogo jogar = new ViewJogo();
+            jogar.ShowDialog();
+        }
+
+        private void buttonVSJogador_Click(object sender, EventArgs e)
+        {
+            ViewJogo jogar = new ViewJogo();
+            jogar.ShowDialog();
+        }
+
+        private void buttonONLINE_Click(object sender, EventArgs e)
+        {
+            ViewJogo jogar = new ViewJogo();
+            jogar.ShowDialog();
+        }
     }
 }

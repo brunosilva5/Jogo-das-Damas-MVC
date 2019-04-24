@@ -27,7 +27,7 @@ namespace Login1
 
         private void loginbutton_Click(object sender, EventArgs e)
         {
-            ViewJogo jogar = new ViewJogo();
+            ViewModoJogo jogar = new ViewModoJogo();
             jogar.ShowDialog();
         }
 
