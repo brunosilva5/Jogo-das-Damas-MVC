@@ -23,7 +23,6 @@ namespace Login1
         public ViewRegistar()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
 
@@ -78,13 +77,12 @@ namespace Login1
         }
         private void textboxConfirmarPassword_Enter(object sender, EventArgs e)
         {
-            if (textboxConfirmarPassword.Text == "Password")
+            if (textboxConfirmarPassword.Text == "Confirm Password")
             {
                 textboxConfirmarPassword.Text = "";
                 textboxConfirmarPassword.isPassword = true;
             }
         }
-
         private void textboxConfirmarPassword_Leave(object sender, EventArgs e)
         {
             if (textboxConfirmarPassword.Text == "")
@@ -93,6 +91,7 @@ namespace Login1
                 textboxConfirmarPassword.Text = "Password";
             }
         }
+
         //--------------------------------------------------------------------
 
 

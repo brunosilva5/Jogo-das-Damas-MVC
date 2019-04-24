@@ -15,13 +15,13 @@ namespace Login1
         public ViewLogin()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
 
         private void signupbutton_Click(object sender, EventArgs e)
         {
             ViewRegistar registar = new ViewRegistar();
+            this.Visible = false;
             registar.ShowDialog();
         }
 
@@ -29,6 +29,7 @@ namespace Login1
         {
             ViewJogo jogar = new ViewJogo();
             jogar.ShowDialog();
+            
         }
 
 

@@ -20,7 +20,6 @@ namespace Login1
         public ViewJogo()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
 
             /*matriz[0, 0] = pictureBox1;
             matriz[0, 1] = pictureBox2;

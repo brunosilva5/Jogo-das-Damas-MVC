@@ -52,6 +52,7 @@
             this.bunifuGradientPanel1.Controls.Add(this.textboxPassword);
             this.bunifuGradientPanel1.Controls.Add(this.textboxUsername);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton1);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Black;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Silver;
@@ -69,7 +70,7 @@
             this.loginbutton.ActiveFillColor = System.Drawing.Color.Silver;
             this.loginbutton.ActiveForecolor = System.Drawing.Color.White;
             this.loginbutton.ActiveLineColor = System.Drawing.Color.White;
-            this.loginbutton.BackColor = System.Drawing.Color.Transparent;
+            this.loginbutton.BackColor = System.Drawing.SystemColors.Control;
             this.loginbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("loginbutton.BackgroundImage")));
             this.loginbutton.ButtonText = "LOGIN";
             this.loginbutton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -95,7 +96,7 @@
             this.signupbutton.ActiveFillColor = System.Drawing.Color.Transparent;
             this.signupbutton.ActiveForecolor = System.Drawing.Color.Transparent;
             this.signupbutton.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.signupbutton.BackColor = System.Drawing.Color.Transparent;
+            this.signupbutton.BackColor = System.Drawing.SystemColors.Control;
             this.signupbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("signupbutton.BackgroundImage")));
             this.signupbutton.ButtonText = "Sign up";
             this.signupbutton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -235,6 +236,7 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.bunifuGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.closelogin)).EndInit();

@@ -58,6 +58,7 @@
             this.bunifuGradientPanel1.Controls.Add(this.textboxConfirmarPassword);
             this.bunifuGradientPanel1.Controls.Add(this.textboxPasswordRegistar);
             this.bunifuGradientPanel1.Controls.Add(this.textboxUsernameRegistar);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Black;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Silver;
@@ -76,7 +77,7 @@
             this.registarbutton.ActiveFillColor = System.Drawing.Color.Silver;
             this.registarbutton.ActiveForecolor = System.Drawing.Color.White;
             this.registarbutton.ActiveLineColor = System.Drawing.Color.White;
-            this.registarbutton.BackColor = System.Drawing.Color.Transparent;
+            this.registarbutton.BackColor = System.Drawing.SystemColors.Control;
             this.registarbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("registarbutton.BackgroundImage")));
             this.registarbutton.ButtonText = "SIGN UP";
             this.registarbutton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -240,6 +241,7 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewRegistar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registar";
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
