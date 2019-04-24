@@ -31,5 +31,10 @@ namespace Login1
         {
 
         }
+
+        private void bunifuCustomLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
