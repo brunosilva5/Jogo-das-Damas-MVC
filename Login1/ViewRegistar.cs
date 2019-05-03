@@ -37,11 +37,9 @@ namespace Login1
                     cultureList.Add(region.EnglishName);
 
                     comboBox1.Items.Add(region.EnglishName);
-                    
                 }
             }
         }
-
 
 
         //---------------------------------------------------------------------
@@ -91,7 +89,6 @@ namespace Login1
                 textboxConfirmarPassword.Text = "Password";
             }
         }
-
         //--------------------------------------------------------------------
 
 
@@ -101,6 +98,7 @@ namespace Login1
 
         private void backbutton_Click(object sender, EventArgs e)
         {
+            Program.V_Login.Visible = true;
             this.Close();
         }
 

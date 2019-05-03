@@ -17,19 +17,16 @@ namespace Login1
             InitializeComponent();
         }
 
-
         private void signupbutton_Click(object sender, EventArgs e)
         {
-            ViewRegistar registar = new ViewRegistar();
             this.Visible = false;
-            registar.ShowDialog();
+            Program.V_Registar.ShowDialog();
         }
 
         private void loginbutton_Click(object sender, EventArgs e)
         {
-            ViewModoJogo jogar = new ViewModoJogo();
-            jogar.ShowDialog();
-            
+            this.Visible = false;
+            Program.V_ModoJogo.ShowDialog(); 
         }
 
 

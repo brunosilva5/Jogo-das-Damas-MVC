@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Login1
 {
@@ -16,6 +17,7 @@ namespace Login1
         Jogo j = new Jogo();*/
 
         PictureBox selecionado = null;
+        private int final = 0;
 
         public ViewJogo()
         {
@@ -92,9 +94,9 @@ namespace Login1
 
         private void TabClick(object sender, MouseEventArgs e)
         {
-            
-            Movimento((PictureBox)sender);
-            Selecao(sender);
+            if (final==1)Movimento((PictureBox)sender);
+            else Selecao(sender);
+
         }
 
         public void Selecao(object obj)
@@ -107,6 +109,7 @@ namespace Login1
 
             selecionado = (PictureBox)obj;
             selecionado.BackColor = Color.Gold;
+            final = 1;
         }
 
         private void Movimento(PictureBox destino)
@@ -116,14 +119,12 @@ namespace Login1
                 return;
             }
             destino.BackgroundImage = selecionado.BackgroundImage;
-            selecionado.BackgroundImage = null;
-            
-            if (true) // movimento extra
-            {
-                selecionado.BackColor = Color.Black;
-                selecionado = null;
 
-            }
+            selecionado.BackgroundImage = null;
+            selecionado.BackColor = Color.Black;
+            selecionado = null;
+            final = 0;
+            
         }
 
 
@@ -229,9 +230,12 @@ namespace Login1
             {
                 panelsettings.Visible = false;
                 panelsettings.Width = 50;
-                panelsettings.BackColor = Color.White;
-                buttonSairMenu.Visible = false;
-                buttonSettingsJogo.BackColor = Color.Black;
+                panelsettings.BackColor = Color.Transparent;
+                buttonMyProfileMenu.Visible = false;
+                buttonExitMenu.Visible = false;
+                buttonAboutMenu.Visible = false;
+                buttonRulesMenu.Visible = false;
+                buttonSettingsJogo.BackColor = Color.Transparent;
                 PanelAnimator.ShowSync(panelsettings);
 
             }
@@ -239,19 +243,17 @@ namespace Login1
             {
                 panelsettings.Visible = true;
                 panelsettings.Width = 220;
-                buttonSairMenu.Visible = true;
+                buttonMyProfileMenu.Visible = true;
+                buttonExitMenu.Visible = true;
+                buttonAboutMenu.Visible = true;
+                buttonRulesMenu.Visible = true;
                 panelsettings.BackColor = Color.Silver;
                 buttonSettingsJogo.BackColor = Color.Transparent;
                 PanelAnimator2.ShowSync(panelsettings);
             }
 
         }
-
-
-
-
-
-
+ 
 
         /*private void MostraPecaTabuleiro(Peca peca)
         {
@@ -268,5 +270,53 @@ namespace Login1
             this.Close();
         }
 
+
+        //--------------------------------------------------------------------
+        private void pictureBoxplayer1_Click(object sender, EventArgs e)
+        {
+            Program.V_Perfil.ShowDialog();
+        }
+
+        private void pictureBoxplayer2_Click(object sender, EventArgs e)
+        {
+            Program.V_Perfil.ShowDialog();
+        }
+
+        //-------------------------------------------------------------------
+
+        private void buttonMyPerfilMenu_Click(object sender, EventArgs e)
+        {
+            Program.V_Perfil.ShowDialog();
+            //Mostrar Editar perfil
+            
+        }
+
+        private void buttonExitMenu_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonAboutMenu_Click(object sender, EventArgs e)
+        {
+            panelsettings.Visible = false;
+            panelsettings.Width = 50;
+            panelsettings.BackColor = Color.Transparent;
+            buttonMyProfileMenu.Visible = false;
+            buttonExitMenu.Visible = false;
+            buttonAboutMenu.Visible = false;
+            buttonRulesMenu.Visible = false;
+            buttonSettingsJogo.BackColor = Color.Transparent;
+            PanelAnimator.ShowSync(panelsettings);
+
+            Program.V_About.ShowDialog();
+        }
+
+
+        private void buttonRulesMenu_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.fpdamas.pt/downloads/Regras_Damas_Cl%C3%A1ssicas_.pdf");
+        }
+
+        //--------------------------------------------------------------------
     }
 }

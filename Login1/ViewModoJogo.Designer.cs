@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewModoJogo));
             this.ViewPanelModoJogo = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonONLINE = new System.Windows.Forms.Button();
             this.buttonVSJogador = new System.Windows.Forms.Button();
             this.buttonVSComputador = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.closelogin = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.closeModeGame = new System.Windows.Forms.PictureBox();
             this.ViewPanelModoJogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closelogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeModeGame)).BeginInit();
             this.SuspendLayout();
             // 
             // ViewPanelModoJogo
@@ -56,7 +56,7 @@
             this.ViewPanelModoJogo.Controls.Add(this.buttonVSJogador);
             this.ViewPanelModoJogo.Controls.Add(this.buttonVSComputador);
             this.ViewPanelModoJogo.Controls.Add(this.label1);
-            this.ViewPanelModoJogo.Controls.Add(this.closelogin);
+            this.ViewPanelModoJogo.Controls.Add(this.closeModeGame);
             this.ViewPanelModoJogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ViewPanelModoJogo.ForeColor = System.Drawing.Color.Black;
             this.ViewPanelModoJogo.GradientBottomLeft = System.Drawing.Color.Black;
@@ -68,7 +68,39 @@
             this.ViewPanelModoJogo.Quality = 10;
             this.ViewPanelModoJogo.Size = new System.Drawing.Size(850, 580);
             this.ViewPanelModoJogo.TabIndex = 0;
-            this.ViewPanelModoJogo.Paint += new System.Windows.Forms.PaintEventHandler(this.ViewPanelModoJogo_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(661, 140);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(382, 140);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(102, 140);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // buttonONLINE
             // 
@@ -130,50 +162,17 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Selecione o Modo de Jogo";
             // 
-            // closelogin
+            // closeModeGame
             // 
-            this.closelogin.BackColor = System.Drawing.Color.Transparent;
-            this.closelogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closelogin.BackgroundImage")));
-            this.closelogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.closelogin.Location = new System.Drawing.Point(812, 3);
-            this.closelogin.Name = "closelogin";
-            this.closelogin.Size = new System.Drawing.Size(35, 35);
-            this.closelogin.TabIndex = 7;
-            this.closelogin.TabStop = false;
-            this.closelogin.Click += new System.EventHandler(this.closelogin_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(661, 140);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(102, 140);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(382, 140);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
+            this.closeModeGame.BackColor = System.Drawing.Color.Transparent;
+            this.closeModeGame.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeModeGame.BackgroundImage")));
+            this.closeModeGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.closeModeGame.Location = new System.Drawing.Point(803, 12);
+            this.closeModeGame.Name = "closeModeGame";
+            this.closeModeGame.Size = new System.Drawing.Size(35, 35);
+            this.closeModeGame.TabIndex = 7;
+            this.closeModeGame.TabStop = false;
+            this.closeModeGame.Click += new System.EventHandler(this.closeModeGame_Click);
             // 
             // ViewModoJogo
             // 
@@ -182,14 +181,16 @@
             this.ClientSize = new System.Drawing.Size(850, 580);
             this.Controls.Add(this.ViewPanelModoJogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewModoJogo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewModoJogo";
             this.ViewPanelModoJogo.ResumeLayout(false);
             this.ViewPanelModoJogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closelogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeModeGame)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,7 +198,7 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuGradientPanel ViewPanelModoJogo;
-        private System.Windows.Forms.PictureBox closelogin;
+        private System.Windows.Forms.PictureBox closeModeGame;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonONLINE;
         private System.Windows.Forms.Button buttonVSJogador;

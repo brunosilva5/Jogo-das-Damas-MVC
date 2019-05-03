@@ -17,32 +17,30 @@ namespace Login1
             InitializeComponent();
         }
 
-        private void ViewPanelModoJogo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void closelogin_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void buttonVSComputador_Click(object sender, EventArgs e)
         {
-            ViewJogo jogar = new ViewJogo();
-            jogar.ShowDialog();
+            Program.V_Jogo.ShowDialog();
+            this.Visible = false;
+
         }
 
         private void buttonVSJogador_Click(object sender, EventArgs e)
         {
-            ViewJogo jogar = new ViewJogo();
-            jogar.ShowDialog();
+            Program.V_Jogo.ShowDialog();
+            this.Visible = false;
+
         }
 
         private void buttonONLINE_Click(object sender, EventArgs e)
         {
-            ViewJogo jogar = new ViewJogo();
-            jogar.ShowDialog();
+            Program.V_Jogo.ShowDialog();
+            this.Visible = false;
+        }
+
+        private void closeModeGame_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.V_Login.Visible = true;
         }
     }
 }

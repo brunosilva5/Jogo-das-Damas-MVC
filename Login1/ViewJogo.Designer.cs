@@ -38,7 +38,10 @@
             this.labelplayer1 = new System.Windows.Forms.Label();
             this.pictureBoxplayer1 = new System.Windows.Forms.PictureBox();
             this.panelsettings = new System.Windows.Forms.Panel();
-            this.buttonSairMenu = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.buttonRulesMenu = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.buttonMyProfileMenu = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.buttonAboutMenu = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.buttonExitMenu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.buttonSettingsJogo = new Bunifu.Framework.UI.BunifuImageButton();
             this.labelC8 = new System.Windows.Forms.Label();
             this.labelC7 = new System.Windows.Forms.Label();
@@ -318,6 +321,7 @@
             // 
             this.pictureBoxplayer2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxplayer2.BackgroundImage")));
             this.pictureBoxplayer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxplayer2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PanelAnimator.SetDecoration(this.pictureBoxplayer2, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBoxplayer2, BunifuAnimatorNS.DecorationType.None);
             this.pictureBoxplayer2.Location = new System.Drawing.Point(647, 341);
@@ -325,6 +329,7 @@
             this.pictureBoxplayer2.Size = new System.Drawing.Size(122, 100);
             this.pictureBoxplayer2.TabIndex = 196;
             this.pictureBoxplayer2.TabStop = false;
+            this.pictureBoxplayer2.Click += new System.EventHandler(this.pictureBoxplayer2_Click);
             // 
             // labelplayer1
             // 
@@ -342,6 +347,7 @@
             // 
             this.pictureBoxplayer1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxplayer1.BackgroundImage")));
             this.pictureBoxplayer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxplayer1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PanelAnimator.SetDecoration(this.pictureBoxplayer1, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBoxplayer1, BunifuAnimatorNS.DecorationType.None);
             this.pictureBoxplayer1.Location = new System.Drawing.Point(647, 124);
@@ -349,11 +355,15 @@
             this.pictureBoxplayer1.Size = new System.Drawing.Size(122, 100);
             this.pictureBoxplayer1.TabIndex = 194;
             this.pictureBoxplayer1.TabStop = false;
+            this.pictureBoxplayer1.Click += new System.EventHandler(this.pictureBoxplayer1_Click);
             // 
             // panelsettings
             // 
-            this.panelsettings.BackColor = System.Drawing.Color.White;
-            this.panelsettings.Controls.Add(this.buttonSairMenu);
+            this.panelsettings.BackColor = System.Drawing.Color.Transparent;
+            this.panelsettings.Controls.Add(this.buttonRulesMenu);
+            this.panelsettings.Controls.Add(this.buttonMyProfileMenu);
+            this.panelsettings.Controls.Add(this.buttonAboutMenu);
+            this.panelsettings.Controls.Add(this.buttonExitMenu);
             this.panelsettings.Controls.Add(this.buttonSettingsJogo);
             this.PanelAnimator2.SetDecoration(this.panelsettings, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.panelsettings, BunifuAnimatorNS.DecorationType.None);
@@ -363,49 +373,170 @@
             this.panelsettings.Size = new System.Drawing.Size(50, 580);
             this.panelsettings.TabIndex = 0;
             // 
-            // buttonSairMenu
+            // buttonRulesMenu
             // 
-            this.buttonSairMenu.Activecolor = System.Drawing.Color.Silver;
-            this.buttonSairMenu.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSairMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonSairMenu.BorderRadius = 0;
-            this.buttonSairMenu.ButtonText = "    Sair";
-            this.buttonSairMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PanelAnimator2.SetDecoration(this.buttonSairMenu, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimator.SetDecoration(this.buttonSairMenu, BunifuAnimatorNS.DecorationType.None);
-            this.buttonSairMenu.DisabledColor = System.Drawing.Color.Gray;
-            this.buttonSairMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSairMenu.Iconcolor = System.Drawing.Color.Transparent;
-            this.buttonSairMenu.Iconimage = ((System.Drawing.Image)(resources.GetObject("buttonSairMenu.Iconimage")));
-            this.buttonSairMenu.Iconimage_right = null;
-            this.buttonSairMenu.Iconimage_right_Selected = null;
-            this.buttonSairMenu.Iconimage_Selected = null;
-            this.buttonSairMenu.IconMarginLeft = 0;
-            this.buttonSairMenu.IconMarginRight = 0;
-            this.buttonSairMenu.IconRightVisible = true;
-            this.buttonSairMenu.IconRightZoom = 0D;
-            this.buttonSairMenu.IconVisible = true;
-            this.buttonSairMenu.IconZoom = 90D;
-            this.buttonSairMenu.IsTab = false;
-            this.buttonSairMenu.Location = new System.Drawing.Point(26, 396);
-            this.buttonSairMenu.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonSairMenu.Name = "buttonSairMenu";
-            this.buttonSairMenu.Normalcolor = System.Drawing.Color.Transparent;
-            this.buttonSairMenu.OnHovercolor = System.Drawing.Color.Transparent;
-            this.buttonSairMenu.OnHoverTextColor = System.Drawing.Color.White;
-            this.buttonSairMenu.selected = false;
-            this.buttonSairMenu.Size = new System.Drawing.Size(182, 48);
-            this.buttonSairMenu.TabIndex = 1;
-            this.buttonSairMenu.Text = "    Sair";
-            this.buttonSairMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSairMenu.Textcolor = System.Drawing.Color.White;
-            this.buttonSairMenu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSairMenu.Visible = false;
+            this.buttonRulesMenu.Activecolor = System.Drawing.Color.Silver;
+            this.buttonRulesMenu.BackColor = System.Drawing.Color.Transparent;
+            this.buttonRulesMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonRulesMenu.BorderRadius = 0;
+            this.buttonRulesMenu.ButtonText = "    Rules";
+            this.buttonRulesMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelAnimator2.SetDecoration(this.buttonRulesMenu, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.buttonRulesMenu, BunifuAnimatorNS.DecorationType.None);
+            this.buttonRulesMenu.DisabledColor = System.Drawing.Color.Gray;
+            this.buttonRulesMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRulesMenu.Iconcolor = System.Drawing.Color.Transparent;
+            this.buttonRulesMenu.Iconimage = ((System.Drawing.Image)(resources.GetObject("buttonRulesMenu.Iconimage")));
+            this.buttonRulesMenu.Iconimage_right = null;
+            this.buttonRulesMenu.Iconimage_right_Selected = null;
+            this.buttonRulesMenu.Iconimage_Selected = null;
+            this.buttonRulesMenu.IconMarginLeft = 0;
+            this.buttonRulesMenu.IconMarginRight = 0;
+            this.buttonRulesMenu.IconRightVisible = true;
+            this.buttonRulesMenu.IconRightZoom = 0D;
+            this.buttonRulesMenu.IconVisible = true;
+            this.buttonRulesMenu.IconZoom = 90D;
+            this.buttonRulesMenu.IsTab = false;
+            this.buttonRulesMenu.Location = new System.Drawing.Point(30, 284);
+            this.buttonRulesMenu.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonRulesMenu.Name = "buttonRulesMenu";
+            this.buttonRulesMenu.Normalcolor = System.Drawing.Color.Transparent;
+            this.buttonRulesMenu.OnHovercolor = System.Drawing.Color.Transparent;
+            this.buttonRulesMenu.OnHoverTextColor = System.Drawing.Color.White;
+            this.buttonRulesMenu.selected = false;
+            this.buttonRulesMenu.Size = new System.Drawing.Size(182, 48);
+            this.buttonRulesMenu.TabIndex = 4;
+            this.buttonRulesMenu.Text = "    Rules";
+            this.buttonRulesMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRulesMenu.Textcolor = System.Drawing.Color.White;
+            this.buttonRulesMenu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRulesMenu.Visible = false;
+            this.buttonRulesMenu.Click += new System.EventHandler(this.buttonRulesMenu_Click);
+            // 
+            // buttonMyProfileMenu
+            // 
+            this.buttonMyProfileMenu.Activecolor = System.Drawing.Color.Silver;
+            this.buttonMyProfileMenu.BackColor = System.Drawing.Color.Transparent;
+            this.buttonMyProfileMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonMyProfileMenu.BorderRadius = 0;
+            this.buttonMyProfileMenu.ButtonText = "    My Profile";
+            this.buttonMyProfileMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelAnimator2.SetDecoration(this.buttonMyProfileMenu, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.buttonMyProfileMenu, BunifuAnimatorNS.DecorationType.None);
+            this.buttonMyProfileMenu.DisabledColor = System.Drawing.Color.Gray;
+            this.buttonMyProfileMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMyProfileMenu.Iconcolor = System.Drawing.Color.Transparent;
+            this.buttonMyProfileMenu.Iconimage = ((System.Drawing.Image)(resources.GetObject("buttonMyProfileMenu.Iconimage")));
+            this.buttonMyProfileMenu.Iconimage_right = null;
+            this.buttonMyProfileMenu.Iconimage_right_Selected = null;
+            this.buttonMyProfileMenu.Iconimage_Selected = null;
+            this.buttonMyProfileMenu.IconMarginLeft = 0;
+            this.buttonMyProfileMenu.IconMarginRight = 0;
+            this.buttonMyProfileMenu.IconRightVisible = true;
+            this.buttonMyProfileMenu.IconRightZoom = 0D;
+            this.buttonMyProfileMenu.IconVisible = true;
+            this.buttonMyProfileMenu.IconZoom = 90D;
+            this.buttonMyProfileMenu.IsTab = false;
+            this.buttonMyProfileMenu.Location = new System.Drawing.Point(30, 193);
+            this.buttonMyProfileMenu.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonMyProfileMenu.Name = "buttonMyProfileMenu";
+            this.buttonMyProfileMenu.Normalcolor = System.Drawing.Color.Transparent;
+            this.buttonMyProfileMenu.OnHovercolor = System.Drawing.Color.Transparent;
+            this.buttonMyProfileMenu.OnHoverTextColor = System.Drawing.Color.White;
+            this.buttonMyProfileMenu.selected = false;
+            this.buttonMyProfileMenu.Size = new System.Drawing.Size(182, 48);
+            this.buttonMyProfileMenu.TabIndex = 3;
+            this.buttonMyProfileMenu.Text = "    My Profile";
+            this.buttonMyProfileMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonMyProfileMenu.Textcolor = System.Drawing.Color.White;
+            this.buttonMyProfileMenu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMyProfileMenu.Visible = false;
+            this.buttonMyProfileMenu.Click += new System.EventHandler(this.buttonMyPerfilMenu_Click);
+            // 
+            // buttonAboutMenu
+            // 
+            this.buttonAboutMenu.Activecolor = System.Drawing.Color.Silver;
+            this.buttonAboutMenu.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAboutMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonAboutMenu.BorderRadius = 0;
+            this.buttonAboutMenu.ButtonText = "    About";
+            this.buttonAboutMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelAnimator2.SetDecoration(this.buttonAboutMenu, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.buttonAboutMenu, BunifuAnimatorNS.DecorationType.None);
+            this.buttonAboutMenu.DisabledColor = System.Drawing.Color.Gray;
+            this.buttonAboutMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAboutMenu.Iconcolor = System.Drawing.Color.Transparent;
+            this.buttonAboutMenu.Iconimage = ((System.Drawing.Image)(resources.GetObject("buttonAboutMenu.Iconimage")));
+            this.buttonAboutMenu.Iconimage_right = null;
+            this.buttonAboutMenu.Iconimage_right_Selected = null;
+            this.buttonAboutMenu.Iconimage_Selected = null;
+            this.buttonAboutMenu.IconMarginLeft = 0;
+            this.buttonAboutMenu.IconMarginRight = 0;
+            this.buttonAboutMenu.IconRightVisible = true;
+            this.buttonAboutMenu.IconRightZoom = 0D;
+            this.buttonAboutMenu.IconVisible = true;
+            this.buttonAboutMenu.IconZoom = 90D;
+            this.buttonAboutMenu.IsTab = false;
+            this.buttonAboutMenu.Location = new System.Drawing.Point(30, 375);
+            this.buttonAboutMenu.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonAboutMenu.Name = "buttonAboutMenu";
+            this.buttonAboutMenu.Normalcolor = System.Drawing.Color.Transparent;
+            this.buttonAboutMenu.OnHovercolor = System.Drawing.Color.Transparent;
+            this.buttonAboutMenu.OnHoverTextColor = System.Drawing.Color.White;
+            this.buttonAboutMenu.selected = false;
+            this.buttonAboutMenu.Size = new System.Drawing.Size(182, 48);
+            this.buttonAboutMenu.TabIndex = 2;
+            this.buttonAboutMenu.Text = "    About";
+            this.buttonAboutMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAboutMenu.Textcolor = System.Drawing.Color.White;
+            this.buttonAboutMenu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAboutMenu.Visible = false;
+            this.buttonAboutMenu.Click += new System.EventHandler(this.buttonAboutMenu_Click);
+            // 
+            // buttonExitMenu
+            // 
+            this.buttonExitMenu.Activecolor = System.Drawing.Color.Silver;
+            this.buttonExitMenu.BackColor = System.Drawing.Color.Transparent;
+            this.buttonExitMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonExitMenu.BorderRadius = 0;
+            this.buttonExitMenu.ButtonText = "    Exit";
+            this.buttonExitMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelAnimator2.SetDecoration(this.buttonExitMenu, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.buttonExitMenu, BunifuAnimatorNS.DecorationType.None);
+            this.buttonExitMenu.DisabledColor = System.Drawing.Color.Gray;
+            this.buttonExitMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExitMenu.Iconcolor = System.Drawing.Color.Transparent;
+            this.buttonExitMenu.Iconimage = ((System.Drawing.Image)(resources.GetObject("buttonExitMenu.Iconimage")));
+            this.buttonExitMenu.Iconimage_right = null;
+            this.buttonExitMenu.Iconimage_right_Selected = null;
+            this.buttonExitMenu.Iconimage_Selected = null;
+            this.buttonExitMenu.IconMarginLeft = 0;
+            this.buttonExitMenu.IconMarginRight = 0;
+            this.buttonExitMenu.IconRightVisible = true;
+            this.buttonExitMenu.IconRightZoom = 0D;
+            this.buttonExitMenu.IconVisible = true;
+            this.buttonExitMenu.IconZoom = 90D;
+            this.buttonExitMenu.IsTab = false;
+            this.buttonExitMenu.Location = new System.Drawing.Point(30, 463);
+            this.buttonExitMenu.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonExitMenu.Name = "buttonExitMenu";
+            this.buttonExitMenu.Normalcolor = System.Drawing.Color.Transparent;
+            this.buttonExitMenu.OnHovercolor = System.Drawing.Color.Transparent;
+            this.buttonExitMenu.OnHoverTextColor = System.Drawing.Color.White;
+            this.buttonExitMenu.selected = false;
+            this.buttonExitMenu.Size = new System.Drawing.Size(182, 48);
+            this.buttonExitMenu.TabIndex = 1;
+            this.buttonExitMenu.Text = "    Exit";
+            this.buttonExitMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExitMenu.Textcolor = System.Drawing.Color.White;
+            this.buttonExitMenu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExitMenu.Visible = false;
+            this.buttonExitMenu.Click += new System.EventHandler(this.buttonExitMenu_Click);
             // 
             // buttonSettingsJogo
             // 
             this.buttonSettingsJogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSettingsJogo.BackColor = System.Drawing.Color.Black;
+            this.buttonSettingsJogo.BackColor = System.Drawing.Color.Transparent;
             this.PanelAnimator2.SetDecoration(this.buttonSettingsJogo, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.buttonSettingsJogo, BunifuAnimatorNS.DecorationType.None);
             this.buttonSettingsJogo.Image = ((System.Drawing.Image)(resources.GetObject("buttonSettingsJogo.Image")));
@@ -1401,7 +1532,7 @@
             // 
             // buttonClose
             // 
-            this.buttonClose.BackColor = System.Drawing.Color.Black;
+            this.buttonClose.BackColor = System.Drawing.Color.Transparent;
             this.PanelAnimator2.SetDecoration(this.buttonClose, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.buttonClose, BunifuAnimatorNS.DecorationType.None);
             this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
@@ -1466,6 +1597,7 @@
             this.PanelAnimator.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewJogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewJogo";
@@ -1549,7 +1681,7 @@
 
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.Panel panelsettings;
-        private Bunifu.Framework.UI.BunifuFlatButton buttonSairMenu;
+        private Bunifu.Framework.UI.BunifuFlatButton buttonExitMenu;
         private Bunifu.Framework.UI.BunifuImageButton buttonSettingsJogo;
         private Bunifu.Framework.UI.BunifuImageButton buttonClose;
         private BunifuAnimatorNS.BunifuTransition PanelAnimator;
@@ -1639,5 +1771,8 @@
         private System.Windows.Forms.PictureBox pictureBoxplayer2;
         private System.Windows.Forms.Label labelplayer1;
         private System.Windows.Forms.PictureBox pictureBoxplayer1;
+        private Bunifu.Framework.UI.BunifuFlatButton buttonMyProfileMenu;
+        private Bunifu.Framework.UI.BunifuFlatButton buttonAboutMenu;
+        private Bunifu.Framework.UI.BunifuFlatButton buttonRulesMenu;
     }
 }

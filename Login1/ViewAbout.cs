@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Login1
 {
-    public partial class ViewPerfil : Form
+    public partial class ViewAbout : Form
     {
-        public ViewPerfil()
+        public ViewAbout()
         {
             InitializeComponent();
         }
 
-        private void backbutton_Click(object sender, EventArgs e)
+        private void buttonAbout_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

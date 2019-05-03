@@ -34,7 +34,6 @@
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboboxPaises = new Bunifu.Framework.UI.BunifuDropdown();
             this.backbutton = new System.Windows.Forms.PictureBox();
             this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.textboxConfirmarPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -52,7 +51,6 @@
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel2);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel1);
             this.bunifuGradientPanel1.Controls.Add(this.comboBox1);
-            this.bunifuGradientPanel1.Controls.Add(this.comboboxPaises);
             this.bunifuGradientPanel1.Controls.Add(this.backbutton);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuDatepicker1);
             this.bunifuGradientPanel1.Controls.Add(this.textboxConfirmarPassword);
@@ -99,7 +97,7 @@
             // 
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(237, 410);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(237, 417);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(105, 17);
             this.bunifuCustomLabel2.TabIndex = 9;
@@ -109,7 +107,7 @@
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(237, 358);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(237, 365);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(144, 17);
             this.bunifuCustomLabel1.TabIndex = 8;
@@ -118,26 +116,10 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(661, 409);
+            this.comboBox1.Location = new System.Drawing.Point(489, 413);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 7;
-            // 
-            // comboboxPaises
-            // 
-            this.comboboxPaises.BackColor = System.Drawing.Color.Transparent;
-            this.comboboxPaises.BorderRadius = 3;
-            this.comboboxPaises.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboboxPaises.ForeColor = System.Drawing.Color.Black;
-            this.comboboxPaises.Items = new string[0];
-            this.comboboxPaises.Location = new System.Drawing.Point(409, 400);
-            this.comboboxPaises.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboboxPaises.Name = "comboboxPaises";
-            this.comboboxPaises.NomalColor = System.Drawing.Color.Transparent;
-            this.comboboxPaises.onHoverColor = System.Drawing.Color.DarkGray;
-            this.comboboxPaises.selectedIndex = -1;
-            this.comboboxPaises.Size = new System.Drawing.Size(201, 35);
-            this.comboboxPaises.TabIndex = 6;
             // 
             // backbutton
             // 
@@ -158,7 +140,7 @@
             this.bunifuDatepicker1.ForeColor = System.Drawing.Color.Black;
             this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(409, 345);
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(409, 352);
             this.bunifuDatepicker1.Name = "bunifuDatepicker1";
             this.bunifuDatepicker1.Size = new System.Drawing.Size(201, 36);
             this.bunifuDatepicker1.TabIndex = 4;
@@ -177,7 +159,7 @@
             this.textboxConfirmarPassword.LineIdleColor = System.Drawing.Color.Gray;
             this.textboxConfirmarPassword.LineMouseHoverColor = System.Drawing.Color.Black;
             this.textboxConfirmarPassword.LineThickness = 3;
-            this.textboxConfirmarPassword.Location = new System.Drawing.Point(240, 274);
+            this.textboxConfirmarPassword.Location = new System.Drawing.Point(240, 281);
             this.textboxConfirmarPassword.Margin = new System.Windows.Forms.Padding(4);
             this.textboxConfirmarPassword.Name = "textboxConfirmarPassword";
             this.textboxConfirmarPassword.Size = new System.Drawing.Size(370, 44);
@@ -200,7 +182,7 @@
             this.textboxPasswordRegistar.LineIdleColor = System.Drawing.Color.Gray;
             this.textboxPasswordRegistar.LineMouseHoverColor = System.Drawing.Color.Black;
             this.textboxPasswordRegistar.LineThickness = 3;
-            this.textboxPasswordRegistar.Location = new System.Drawing.Point(240, 192);
+            this.textboxPasswordRegistar.Location = new System.Drawing.Point(240, 199);
             this.textboxPasswordRegistar.Margin = new System.Windows.Forms.Padding(4);
             this.textboxPasswordRegistar.Name = "textboxPasswordRegistar";
             this.textboxPasswordRegistar.Size = new System.Drawing.Size(370, 44);
@@ -223,7 +205,7 @@
             this.textboxUsernameRegistar.LineIdleColor = System.Drawing.Color.Gray;
             this.textboxUsernameRegistar.LineMouseHoverColor = System.Drawing.Color.Black;
             this.textboxUsernameRegistar.LineThickness = 3;
-            this.textboxUsernameRegistar.Location = new System.Drawing.Point(240, 110);
+            this.textboxUsernameRegistar.Location = new System.Drawing.Point(240, 117);
             this.textboxUsernameRegistar.Margin = new System.Windows.Forms.Padding(4);
             this.textboxUsernameRegistar.Name = "textboxUsernameRegistar";
             this.textboxUsernameRegistar.Size = new System.Drawing.Size(370, 44);
@@ -240,6 +222,7 @@
             this.ClientSize = new System.Drawing.Size(850, 580);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewRegistar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registar";
@@ -258,7 +241,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox textboxPasswordRegistar;
         private Bunifu.Framework.UI.BunifuMaterialTextbox textboxUsernameRegistar;
         private System.Windows.Forms.PictureBox backbutton;
-        private Bunifu.Framework.UI.BunifuDropdown comboboxPaises;
         private System.Windows.Forms.ComboBox comboBox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
