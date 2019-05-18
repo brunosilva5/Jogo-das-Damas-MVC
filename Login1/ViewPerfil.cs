@@ -21,5 +21,16 @@ namespace Login1
         {
             this.Close();
         }
+
+        private void buttonUpdatePhoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();  //criar uma file dialog
+            dlg.Filter = "Imagens |*.jpg|Todos os Ficheiros|*.*";   //filtrar
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxPerfil.ImageLocation = dlg.FileName;
+                pictureBoxPerfil.BackgroundImage = null;
+            }
+        }
     }
 }

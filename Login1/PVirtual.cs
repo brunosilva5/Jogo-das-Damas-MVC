@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Login1
 {
-    class Jogador
+    public class PVirtual : Player
     {
+
     }
 }

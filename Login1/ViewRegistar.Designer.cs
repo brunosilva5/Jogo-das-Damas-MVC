@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRegistar));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.textBoxEmailRegistar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.buttonPhotoRegistar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.textBoxNameRegistar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.registarbutton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -47,6 +50,9 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.textBoxEmailRegistar);
+            this.bunifuGradientPanel1.Controls.Add(this.buttonPhotoRegistar);
+            this.bunifuGradientPanel1.Controls.Add(this.textBoxNameRegistar);
             this.bunifuGradientPanel1.Controls.Add(this.registarbutton);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel2);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel1);
@@ -67,6 +73,83 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(850, 580);
             this.bunifuGradientPanel1.TabIndex = 0;
             this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
+            // 
+            // textBoxEmailRegistar
+            // 
+            this.textBoxEmailRegistar.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxEmailRegistar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxEmailRegistar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textBoxEmailRegistar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxEmailRegistar.HintForeColor = System.Drawing.Color.Empty;
+            this.textBoxEmailRegistar.HintText = "";
+            this.textBoxEmailRegistar.isPassword = false;
+            this.textBoxEmailRegistar.LineFocusedColor = System.Drawing.Color.Black;
+            this.textBoxEmailRegistar.LineIdleColor = System.Drawing.Color.Gray;
+            this.textBoxEmailRegistar.LineMouseHoverColor = System.Drawing.Color.Black;
+            this.textBoxEmailRegistar.LineThickness = 3;
+            this.textBoxEmailRegistar.Location = new System.Drawing.Point(240, 167);
+            this.textBoxEmailRegistar.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxEmailRegistar.Name = "textBoxEmailRegistar";
+            this.textBoxEmailRegistar.Size = new System.Drawing.Size(370, 44);
+            this.textBoxEmailRegistar.TabIndex = 42;
+            this.textBoxEmailRegistar.Text = "Email";
+            this.textBoxEmailRegistar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // buttonPhotoRegistar
+            // 
+            this.buttonPhotoRegistar.Activecolor = System.Drawing.Color.DarkGray;
+            this.buttonPhotoRegistar.BackColor = System.Drawing.Color.Transparent;
+            this.buttonPhotoRegistar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonPhotoRegistar.BorderRadius = 0;
+            this.buttonPhotoRegistar.ButtonText = "       Photo";
+            this.buttonPhotoRegistar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPhotoRegistar.DisabledColor = System.Drawing.Color.Gray;
+            this.buttonPhotoRegistar.Iconcolor = System.Drawing.Color.Transparent;
+            this.buttonPhotoRegistar.Iconimage = ((System.Drawing.Image)(resources.GetObject("buttonPhotoRegistar.Iconimage")));
+            this.buttonPhotoRegistar.Iconimage_right = null;
+            this.buttonPhotoRegistar.Iconimage_right_Selected = null;
+            this.buttonPhotoRegistar.Iconimage_Selected = null;
+            this.buttonPhotoRegistar.IconMarginLeft = 0;
+            this.buttonPhotoRegistar.IconMarginRight = 0;
+            this.buttonPhotoRegistar.IconRightVisible = true;
+            this.buttonPhotoRegistar.IconRightZoom = 0D;
+            this.buttonPhotoRegistar.IconVisible = true;
+            this.buttonPhotoRegistar.IconZoom = 90D;
+            this.buttonPhotoRegistar.IsTab = false;
+            this.buttonPhotoRegistar.Location = new System.Drawing.Point(666, 352);
+            this.buttonPhotoRegistar.Name = "buttonPhotoRegistar";
+            this.buttonPhotoRegistar.Normalcolor = System.Drawing.Color.Transparent;
+            this.buttonPhotoRegistar.OnHovercolor = System.Drawing.Color.DarkGray;
+            this.buttonPhotoRegistar.OnHoverTextColor = System.Drawing.Color.White;
+            this.buttonPhotoRegistar.selected = false;
+            this.buttonPhotoRegistar.Size = new System.Drawing.Size(120, 30);
+            this.buttonPhotoRegistar.TabIndex = 41;
+            this.buttonPhotoRegistar.Text = "       Photo";
+            this.buttonPhotoRegistar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPhotoRegistar.Textcolor = System.Drawing.Color.White;
+            this.buttonPhotoRegistar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPhotoRegistar.Click += new System.EventHandler(this.buttonPhotoRegistar_Click);
+            // 
+            // textBoxNameRegistar
+            // 
+            this.textBoxNameRegistar.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxNameRegistar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxNameRegistar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textBoxNameRegistar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxNameRegistar.HintForeColor = System.Drawing.Color.Empty;
+            this.textBoxNameRegistar.HintText = "";
+            this.textBoxNameRegistar.isPassword = false;
+            this.textBoxNameRegistar.LineFocusedColor = System.Drawing.Color.Black;
+            this.textBoxNameRegistar.LineIdleColor = System.Drawing.Color.Gray;
+            this.textBoxNameRegistar.LineMouseHoverColor = System.Drawing.Color.Black;
+            this.textBoxNameRegistar.LineThickness = 3;
+            this.textBoxNameRegistar.Location = new System.Drawing.Point(240, 43);
+            this.textBoxNameRegistar.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxNameRegistar.Name = "textBoxNameRegistar";
+            this.textBoxNameRegistar.Size = new System.Drawing.Size(370, 44);
+            this.textBoxNameRegistar.TabIndex = 11;
+            this.textBoxNameRegistar.Text = "Name";
+            this.textBoxNameRegistar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // registarbutton
             // 
@@ -92,6 +175,7 @@
             this.registarbutton.Size = new System.Drawing.Size(181, 41);
             this.registarbutton.TabIndex = 10;
             this.registarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.registarbutton.Click += new System.EventHandler(this.registarbutton_Click);
             // 
             // bunifuCustomLabel2
             // 
@@ -159,7 +243,7 @@
             this.textboxConfirmarPassword.LineIdleColor = System.Drawing.Color.Gray;
             this.textboxConfirmarPassword.LineMouseHoverColor = System.Drawing.Color.Black;
             this.textboxConfirmarPassword.LineThickness = 3;
-            this.textboxConfirmarPassword.Location = new System.Drawing.Point(240, 281);
+            this.textboxConfirmarPassword.Location = new System.Drawing.Point(240, 289);
             this.textboxConfirmarPassword.Margin = new System.Windows.Forms.Padding(4);
             this.textboxConfirmarPassword.Name = "textboxConfirmarPassword";
             this.textboxConfirmarPassword.Size = new System.Drawing.Size(370, 44);
@@ -182,7 +266,7 @@
             this.textboxPasswordRegistar.LineIdleColor = System.Drawing.Color.Gray;
             this.textboxPasswordRegistar.LineMouseHoverColor = System.Drawing.Color.Black;
             this.textboxPasswordRegistar.LineThickness = 3;
-            this.textboxPasswordRegistar.Location = new System.Drawing.Point(240, 199);
+            this.textboxPasswordRegistar.Location = new System.Drawing.Point(240, 228);
             this.textboxPasswordRegistar.Margin = new System.Windows.Forms.Padding(4);
             this.textboxPasswordRegistar.Name = "textboxPasswordRegistar";
             this.textboxPasswordRegistar.Size = new System.Drawing.Size(370, 44);
@@ -205,7 +289,7 @@
             this.textboxUsernameRegistar.LineIdleColor = System.Drawing.Color.Gray;
             this.textboxUsernameRegistar.LineMouseHoverColor = System.Drawing.Color.Black;
             this.textboxUsernameRegistar.LineThickness = 3;
-            this.textboxUsernameRegistar.Location = new System.Drawing.Point(240, 117);
+            this.textboxUsernameRegistar.Location = new System.Drawing.Point(240, 104);
             this.textboxUsernameRegistar.Margin = new System.Windows.Forms.Padding(4);
             this.textboxUsernameRegistar.Name = "textboxUsernameRegistar";
             this.textboxUsernameRegistar.Size = new System.Drawing.Size(370, 44);
@@ -223,7 +307,6 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ViewRegistar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registar";
             this.bunifuGradientPanel1.ResumeLayout(false);
@@ -245,5 +328,8 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuThinButton2 registarbutton;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxNameRegistar;
+        private Bunifu.Framework.UI.BunifuFlatButton buttonPhotoRegistar;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxEmailRegistar;
     }
 }

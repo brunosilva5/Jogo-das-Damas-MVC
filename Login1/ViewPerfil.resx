@@ -128,6 +128,20 @@
         gg==
 </value>
   </data>
+  <data name="buttonUpdatePhoto.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGPC/xhBQAAAeVJREFUaEPt
+        2S9IXWEYx/HrpgP/FINrsymGhRWxKUZdsg1WDAYxOFgZbGHatPkvaRGTGAfDwcLC4tRiFAwuLejS2GBM
+        930uvJdz3/PziF7DeQ7vFz7lPM8L55T7t5ZKpVKpVLlauid9cNHVPdmGi9TN38UlRlH61M3f1REeotSp
+        G2/FHEqduulWXKDUL2Dqplu1idKmbrhV/zCCUqZu2LMFFKYOeZYeOE4d8iw9cJw6FLj5fHyb1IMGM6hc
+        6kGDp7A6ob4SevMe8kHNOdpgPYfa8eYD5MB8RGgDasebWciBeYfQKdSON08gB2Yc1iDU3Jtj1FPDv+iG
+        9Qpqx5tl1FPDA4Q+Qe14M4Z6argKqwu/oXY8+Yl21FMLL2BNQs292UMjtdAPax1q7s00GsXDM4Sq8HZk
+        v748RqN4YRfWAOKZR9/QVLxgb0PWPOKZR4toKl4YhrWPeOZR7sfE7PAXOlCVt6MfeICmsgtf7AJNIHvd
+        qx3kyi4c4hFWMtc8e4lc8dIWTqJrHtn3gV7kUstV8BUytVwFbyFTy1XwDDK17N13hN/jcqkD3hX+XasO
+        eDeFa1MHPPuDHlybOuTZZxSmDnn2GoWpQ54NoTB1yCv7SHxj6qBXa7ixNxUS/u1MpVKpVKr81Wr/AVTK
+        CDDrM7KXAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="backbutton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO

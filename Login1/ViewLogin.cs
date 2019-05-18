@@ -12,6 +12,11 @@ namespace Login1
 {
     public partial class ViewLogin : Form
     {
+        public event MetodosSemParametros UserQuit;
+        public event MetodosSemParametros UserWantSignup;
+        public event MetodosComDuasString UserLogin;
+
+
         public ViewLogin()
         {
             InitializeComponent();
@@ -19,14 +24,12 @@ namespace Login1
 
         private void signupbutton_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            Program.V_Registar.ShowDialog();
+            if (UserWantSignup != null) UserWantSignup();
         }
 
         private void loginbutton_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            Program.V_ModoJogo.ShowDialog(); 
+            if (UserLogin != null) UserLogin(textboxUsername.Text, textboxPassword.Text);
         }
 
 
@@ -67,12 +70,9 @@ namespace Login1
         //-----------------------------------------------------------
 
 
-
-
-
         private void closelogin_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (UserQuit != null) UserQuit();
         }
 
     }

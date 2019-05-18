@@ -30,14 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewJogo));
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.labelplayer2 = new System.Windows.Forms.Label();
             this.pictureBoxplayer2 = new System.Windows.Forms.PictureBox();
             this.labelplayer1 = new System.Windows.Forms.Label();
             this.pictureBoxplayer1 = new System.Windows.Forms.PictureBox();
             this.panelsettings = new System.Windows.Forms.Panel();
+            this.buttonLogoutMenu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.buttonRulesMenu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.buttonMyProfileMenu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.buttonAboutMenu = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -127,6 +128,7 @@
             this.buttonClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.PanelAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.PanelAnimator2 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.toolTipViewProfile = new System.Windows.Forms.ToolTip(this.components);
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxplayer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxplayer1)).BeginInit();
@@ -292,8 +294,8 @@
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox57);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox65);
             this.bunifuGradientPanel1.Controls.Add(this.buttonClose);
-            this.PanelAnimator2.SetDecoration(this.bunifuGradientPanel1, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.bunifuGradientPanel1, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator2.SetDecoration(this.bunifuGradientPanel1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Black;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Silver;
@@ -308,8 +310,8 @@
             // labelplayer2
             // 
             this.labelplayer2.AutoSize = true;
-            this.PanelAnimator.SetDecoration(this.labelplayer2, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelplayer2, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelplayer2, BunifuAnimatorNS.DecorationType.None);
             this.labelplayer2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelplayer2.Location = new System.Drawing.Point(667, 316);
             this.labelplayer2.Name = "labelplayer2";
@@ -322,20 +324,21 @@
             this.pictureBoxplayer2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxplayer2.BackgroundImage")));
             this.pictureBoxplayer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxplayer2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PanelAnimator.SetDecoration(this.pictureBoxplayer2, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBoxplayer2, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBoxplayer2, BunifuAnimatorNS.DecorationType.None);
             this.pictureBoxplayer2.Location = new System.Drawing.Point(647, 341);
             this.pictureBoxplayer2.Name = "pictureBoxplayer2";
             this.pictureBoxplayer2.Size = new System.Drawing.Size(122, 100);
             this.pictureBoxplayer2.TabIndex = 196;
             this.pictureBoxplayer2.TabStop = false;
+            this.toolTipViewProfile.SetToolTip(this.pictureBoxplayer2, "View Profile");
             this.pictureBoxplayer2.Click += new System.EventHandler(this.pictureBoxplayer2_Click);
             // 
             // labelplayer1
             // 
             this.labelplayer1.AutoSize = true;
-            this.PanelAnimator.SetDecoration(this.labelplayer1, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelplayer1, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelplayer1, BunifuAnimatorNS.DecorationType.None);
             this.labelplayer1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelplayer1.Location = new System.Drawing.Point(667, 99);
             this.labelplayer1.Name = "labelplayer1";
@@ -348,30 +351,72 @@
             this.pictureBoxplayer1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxplayer1.BackgroundImage")));
             this.pictureBoxplayer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxplayer1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PanelAnimator.SetDecoration(this.pictureBoxplayer1, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBoxplayer1, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBoxplayer1, BunifuAnimatorNS.DecorationType.None);
             this.pictureBoxplayer1.Location = new System.Drawing.Point(647, 124);
             this.pictureBoxplayer1.Name = "pictureBoxplayer1";
             this.pictureBoxplayer1.Size = new System.Drawing.Size(122, 100);
             this.pictureBoxplayer1.TabIndex = 194;
             this.pictureBoxplayer1.TabStop = false;
+            this.toolTipViewProfile.SetToolTip(this.pictureBoxplayer1, "View Profile");
             this.pictureBoxplayer1.Click += new System.EventHandler(this.pictureBoxplayer1_Click);
             // 
             // panelsettings
             // 
             this.panelsettings.BackColor = System.Drawing.Color.Transparent;
+            this.panelsettings.Controls.Add(this.buttonLogoutMenu);
             this.panelsettings.Controls.Add(this.buttonRulesMenu);
             this.panelsettings.Controls.Add(this.buttonMyProfileMenu);
             this.panelsettings.Controls.Add(this.buttonAboutMenu);
             this.panelsettings.Controls.Add(this.buttonExitMenu);
             this.panelsettings.Controls.Add(this.buttonSettingsJogo);
-            this.PanelAnimator2.SetDecoration(this.panelsettings, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.panelsettings, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator2.SetDecoration(this.panelsettings, BunifuAnimatorNS.DecorationType.None);
             this.panelsettings.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelsettings.Location = new System.Drawing.Point(0, 0);
             this.panelsettings.Name = "panelsettings";
             this.panelsettings.Size = new System.Drawing.Size(50, 580);
             this.panelsettings.TabIndex = 0;
+            // 
+            // buttonLogoutMenu
+            // 
+            this.buttonLogoutMenu.Activecolor = System.Drawing.Color.Silver;
+            this.buttonLogoutMenu.BackColor = System.Drawing.Color.Transparent;
+            this.buttonLogoutMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonLogoutMenu.BorderRadius = 0;
+            this.buttonLogoutMenu.ButtonText = "    Logout";
+            this.buttonLogoutMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelAnimator.SetDecoration(this.buttonLogoutMenu, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator2.SetDecoration(this.buttonLogoutMenu, BunifuAnimatorNS.DecorationType.None);
+            this.buttonLogoutMenu.DisabledColor = System.Drawing.Color.Gray;
+            this.buttonLogoutMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogoutMenu.Iconcolor = System.Drawing.Color.Transparent;
+            this.buttonLogoutMenu.Iconimage = ((System.Drawing.Image)(resources.GetObject("buttonLogoutMenu.Iconimage")));
+            this.buttonLogoutMenu.Iconimage_right = null;
+            this.buttonLogoutMenu.Iconimage_right_Selected = null;
+            this.buttonLogoutMenu.Iconimage_Selected = null;
+            this.buttonLogoutMenu.IconMarginLeft = 0;
+            this.buttonLogoutMenu.IconMarginRight = 0;
+            this.buttonLogoutMenu.IconRightVisible = true;
+            this.buttonLogoutMenu.IconRightZoom = 0D;
+            this.buttonLogoutMenu.IconVisible = true;
+            this.buttonLogoutMenu.IconZoom = 90D;
+            this.buttonLogoutMenu.IsTab = false;
+            this.buttonLogoutMenu.Location = new System.Drawing.Point(30, 375);
+            this.buttonLogoutMenu.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonLogoutMenu.Name = "buttonLogoutMenu";
+            this.buttonLogoutMenu.Normalcolor = System.Drawing.Color.Transparent;
+            this.buttonLogoutMenu.OnHovercolor = System.Drawing.Color.Transparent;
+            this.buttonLogoutMenu.OnHoverTextColor = System.Drawing.Color.White;
+            this.buttonLogoutMenu.selected = false;
+            this.buttonLogoutMenu.Size = new System.Drawing.Size(182, 48);
+            this.buttonLogoutMenu.TabIndex = 5;
+            this.buttonLogoutMenu.Text = "    Logout";
+            this.buttonLogoutMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonLogoutMenu.Textcolor = System.Drawing.Color.White;
+            this.buttonLogoutMenu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogoutMenu.Visible = false;
+            this.buttonLogoutMenu.Click += new System.EventHandler(this.buttonLogoutMenu_Click);
             // 
             // buttonRulesMenu
             // 
@@ -381,8 +426,8 @@
             this.buttonRulesMenu.BorderRadius = 0;
             this.buttonRulesMenu.ButtonText = "    Rules";
             this.buttonRulesMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PanelAnimator2.SetDecoration(this.buttonRulesMenu, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.buttonRulesMenu, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator2.SetDecoration(this.buttonRulesMenu, BunifuAnimatorNS.DecorationType.None);
             this.buttonRulesMenu.DisabledColor = System.Drawing.Color.Gray;
             this.buttonRulesMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRulesMenu.Iconcolor = System.Drawing.Color.Transparent;
@@ -397,7 +442,7 @@
             this.buttonRulesMenu.IconVisible = true;
             this.buttonRulesMenu.IconZoom = 90D;
             this.buttonRulesMenu.IsTab = false;
-            this.buttonRulesMenu.Location = new System.Drawing.Point(30, 284);
+            this.buttonRulesMenu.Location = new System.Drawing.Point(30, 196);
             this.buttonRulesMenu.Margin = new System.Windows.Forms.Padding(6);
             this.buttonRulesMenu.Name = "buttonRulesMenu";
             this.buttonRulesMenu.Normalcolor = System.Drawing.Color.Transparent;
@@ -421,8 +466,8 @@
             this.buttonMyProfileMenu.BorderRadius = 0;
             this.buttonMyProfileMenu.ButtonText = "    My Profile";
             this.buttonMyProfileMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PanelAnimator2.SetDecoration(this.buttonMyProfileMenu, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.buttonMyProfileMenu, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator2.SetDecoration(this.buttonMyProfileMenu, BunifuAnimatorNS.DecorationType.None);
             this.buttonMyProfileMenu.DisabledColor = System.Drawing.Color.Gray;
             this.buttonMyProfileMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMyProfileMenu.Iconcolor = System.Drawing.Color.Transparent;
@@ -437,7 +482,7 @@
             this.buttonMyProfileMenu.IconVisible = true;
             this.buttonMyProfileMenu.IconZoom = 90D;
             this.buttonMyProfileMenu.IsTab = false;
-            this.buttonMyProfileMenu.Location = new System.Drawing.Point(30, 193);
+            this.buttonMyProfileMenu.Location = new System.Drawing.Point(30, 105);
             this.buttonMyProfileMenu.Margin = new System.Windows.Forms.Padding(6);
             this.buttonMyProfileMenu.Name = "buttonMyProfileMenu";
             this.buttonMyProfileMenu.Normalcolor = System.Drawing.Color.Transparent;
@@ -461,8 +506,8 @@
             this.buttonAboutMenu.BorderRadius = 0;
             this.buttonAboutMenu.ButtonText = "    About";
             this.buttonAboutMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PanelAnimator2.SetDecoration(this.buttonAboutMenu, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.buttonAboutMenu, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator2.SetDecoration(this.buttonAboutMenu, BunifuAnimatorNS.DecorationType.None);
             this.buttonAboutMenu.DisabledColor = System.Drawing.Color.Gray;
             this.buttonAboutMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAboutMenu.Iconcolor = System.Drawing.Color.Transparent;
@@ -477,7 +522,7 @@
             this.buttonAboutMenu.IconVisible = true;
             this.buttonAboutMenu.IconZoom = 90D;
             this.buttonAboutMenu.IsTab = false;
-            this.buttonAboutMenu.Location = new System.Drawing.Point(30, 375);
+            this.buttonAboutMenu.Location = new System.Drawing.Point(30, 287);
             this.buttonAboutMenu.Margin = new System.Windows.Forms.Padding(6);
             this.buttonAboutMenu.Name = "buttonAboutMenu";
             this.buttonAboutMenu.Normalcolor = System.Drawing.Color.Transparent;
@@ -501,8 +546,8 @@
             this.buttonExitMenu.BorderRadius = 0;
             this.buttonExitMenu.ButtonText = "    Exit";
             this.buttonExitMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PanelAnimator2.SetDecoration(this.buttonExitMenu, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.buttonExitMenu, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator2.SetDecoration(this.buttonExitMenu, BunifuAnimatorNS.DecorationType.None);
             this.buttonExitMenu.DisabledColor = System.Drawing.Color.Gray;
             this.buttonExitMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExitMenu.Iconcolor = System.Drawing.Color.Transparent;
@@ -554,8 +599,8 @@
             // 
             this.labelC8.AutoSize = true;
             this.labelC8.BackColor = System.Drawing.Color.SaddleBrown;
-            this.PanelAnimator.SetDecoration(this.labelC8, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelC8, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelC8, BunifuAnimatorNS.DecorationType.None);
             this.labelC8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelC8.Location = new System.Drawing.Point(531, 74);
             this.labelC8.Name = "labelC8";
@@ -567,8 +612,8 @@
             // 
             this.labelC7.AutoSize = true;
             this.labelC7.BackColor = System.Drawing.Color.SaddleBrown;
-            this.PanelAnimator.SetDecoration(this.labelC7, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelC7, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelC7, BunifuAnimatorNS.DecorationType.None);
             this.labelC7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelC7.Location = new System.Drawing.Point(478, 74);
             this.labelC7.Name = "labelC7";
@@ -580,8 +625,8 @@
             // 
             this.labelC6.AutoSize = true;
             this.labelC6.BackColor = System.Drawing.Color.SaddleBrown;
-            this.PanelAnimator.SetDecoration(this.labelC6, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelC6, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelC6, BunifuAnimatorNS.DecorationType.None);
             this.labelC6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelC6.Location = new System.Drawing.Point(429, 74);
             this.labelC6.Name = "labelC6";
@@ -593,8 +638,8 @@
             // 
             this.labelC5.AutoSize = true;
             this.labelC5.BackColor = System.Drawing.Color.SaddleBrown;
-            this.PanelAnimator.SetDecoration(this.labelC5, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelC5, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelC5, BunifuAnimatorNS.DecorationType.None);
             this.labelC5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelC5.Location = new System.Drawing.Point(380, 74);
             this.labelC5.Name = "labelC5";
@@ -606,8 +651,8 @@
             // 
             this.labelC4.AutoSize = true;
             this.labelC4.BackColor = System.Drawing.Color.SaddleBrown;
-            this.PanelAnimator.SetDecoration(this.labelC4, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelC4, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelC4, BunifuAnimatorNS.DecorationType.None);
             this.labelC4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelC4.Location = new System.Drawing.Point(331, 74);
             this.labelC4.Name = "labelC4";
@@ -619,8 +664,8 @@
             // 
             this.labelC3.AutoSize = true;
             this.labelC3.BackColor = System.Drawing.Color.SaddleBrown;
-            this.PanelAnimator.SetDecoration(this.labelC3, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelC3, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelC3, BunifuAnimatorNS.DecorationType.None);
             this.labelC3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelC3.Location = new System.Drawing.Point(281, 74);
             this.labelC3.Name = "labelC3";
@@ -632,8 +677,8 @@
             // 
             this.labelC2.AutoSize = true;
             this.labelC2.BackColor = System.Drawing.Color.SaddleBrown;
-            this.PanelAnimator.SetDecoration(this.labelC2, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelC2, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelC2, BunifuAnimatorNS.DecorationType.None);
             this.labelC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelC2.Location = new System.Drawing.Point(229, 74);
             this.labelC2.Name = "labelC2";
@@ -645,8 +690,8 @@
             // 
             this.labelC1.AutoSize = true;
             this.labelC1.BackColor = System.Drawing.Color.SaddleBrown;
-            this.PanelAnimator.SetDecoration(this.labelC1, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelC1, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelC1, BunifuAnimatorNS.DecorationType.None);
             this.labelC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelC1.Location = new System.Drawing.Point(180, 74);
             this.labelC1.Name = "labelC1";
@@ -658,8 +703,8 @@
             // 
             this.labelL1.AutoSize = true;
             this.labelL1.BackColor = System.Drawing.Color.SaddleBrown;
-            this.PanelAnimator.SetDecoration(this.labelL1, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelL1, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelL1, BunifuAnimatorNS.DecorationType.None);
             this.labelL1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelL1.Location = new System.Drawing.Point(146, 461);
             this.labelL1.Name = "labelL1";
@@ -671,8 +716,8 @@
             // 
             this.labelL2.AutoSize = true;
             this.labelL2.BackColor = System.Drawing.Color.SaddleBrown;
-            this.PanelAnimator.SetDecoration(this.labelL2, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelL2, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelL2, BunifuAnimatorNS.DecorationType.None);
             this.labelL2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelL2.Location = new System.Drawing.Point(146, 407);
             this.labelL2.Name = "labelL2";
@@ -684,8 +729,8 @@
             // 
             this.labelL3.AutoSize = true;
             this.labelL3.BackColor = System.Drawing.Color.SaddleBrown;
-            this.PanelAnimator.SetDecoration(this.labelL3, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelL3, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelL3, BunifuAnimatorNS.DecorationType.None);
             this.labelL3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelL3.Location = new System.Drawing.Point(146, 358);
             this.labelL3.Name = "labelL3";
@@ -697,8 +742,8 @@
             // 
             this.labelL4.AutoSize = true;
             this.labelL4.BackColor = System.Drawing.Color.SaddleBrown;
-            this.PanelAnimator.SetDecoration(this.labelL4, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelL4, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelL4, BunifuAnimatorNS.DecorationType.None);
             this.labelL4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelL4.Location = new System.Drawing.Point(146, 308);
             this.labelL4.Name = "labelL4";
@@ -710,8 +755,8 @@
             // 
             this.labelL5.AutoSize = true;
             this.labelL5.BackColor = System.Drawing.Color.SaddleBrown;
-            this.PanelAnimator.SetDecoration(this.labelL5, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelL5, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelL5, BunifuAnimatorNS.DecorationType.None);
             this.labelL5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelL5.Location = new System.Drawing.Point(146, 258);
             this.labelL5.Name = "labelL5";
@@ -723,8 +768,8 @@
             // 
             this.labelL6.AutoSize = true;
             this.labelL6.BackColor = System.Drawing.Color.SaddleBrown;
-            this.PanelAnimator.SetDecoration(this.labelL6, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelL6, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelL6, BunifuAnimatorNS.DecorationType.None);
             this.labelL6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelL6.Location = new System.Drawing.Point(146, 206);
             this.labelL6.Name = "labelL6";
@@ -736,8 +781,8 @@
             // 
             this.labelL7.AutoSize = true;
             this.labelL7.BackColor = System.Drawing.Color.SaddleBrown;
-            this.PanelAnimator.SetDecoration(this.labelL7, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelL7, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelL7, BunifuAnimatorNS.DecorationType.None);
             this.labelL7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelL7.Location = new System.Drawing.Point(146, 159);
             this.labelL7.Name = "labelL7";
@@ -749,8 +794,8 @@
             // 
             this.labelL8.AutoSize = true;
             this.labelL8.BackColor = System.Drawing.Color.SaddleBrown;
-            this.PanelAnimator.SetDecoration(this.labelL8, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.labelL8, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelL8, BunifuAnimatorNS.DecorationType.None);
             this.labelL8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelL8.Location = new System.Drawing.Point(146, 110);
             this.labelL8.Name = "labelL8";
@@ -762,8 +807,8 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Black;
             this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox8, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox8, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox8, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox8.Location = new System.Drawing.Point(512, 441);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(50, 50);
@@ -774,8 +819,8 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox7, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox7, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox7, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox7.Location = new System.Drawing.Point(462, 441);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(50, 50);
@@ -786,8 +831,8 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Black;
             this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox6, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox6, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox6, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox6.Location = new System.Drawing.Point(412, 441);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(50, 50);
@@ -798,8 +843,8 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox5, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox5, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox5, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox5.Location = new System.Drawing.Point(362, 441);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 50);
@@ -810,8 +855,8 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Black;
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox4.Location = new System.Drawing.Point(312, 441);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(50, 50);
@@ -822,8 +867,8 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox3.Location = new System.Drawing.Point(262, 441);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
@@ -834,8 +879,8 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Black;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox2.Location = new System.Drawing.Point(212, 441);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
@@ -846,8 +891,8 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox1.Location = new System.Drawing.Point(162, 441);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
@@ -857,8 +902,8 @@
             // pictureBox16
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox16, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox16, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox16, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox16.Location = new System.Drawing.Point(512, 391);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(50, 50);
@@ -869,8 +914,8 @@
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Black;
             this.pictureBox15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox15.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox15, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox15, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox15, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox15.Location = new System.Drawing.Point(462, 391);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(50, 50);
@@ -881,8 +926,8 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox14, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox14, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox14, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox14.Location = new System.Drawing.Point(412, 391);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(50, 50);
@@ -893,8 +938,8 @@
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.Black;
             this.pictureBox13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox13.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox13, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox13, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox13, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox13.Location = new System.Drawing.Point(362, 391);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(50, 50);
@@ -905,8 +950,8 @@
             // pictureBox12
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox12, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox12, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox12, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox12.Location = new System.Drawing.Point(312, 391);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(50, 50);
@@ -917,8 +962,8 @@
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Black;
             this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox11, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox11, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox11, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox11.Location = new System.Drawing.Point(262, 391);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(50, 50);
@@ -929,8 +974,8 @@
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox10, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox10, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox10, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox10.Location = new System.Drawing.Point(212, 391);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(50, 50);
@@ -941,8 +986,8 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Black;
             this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox9, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox9, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox9, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox9.Location = new System.Drawing.Point(162, 391);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(50, 50);
@@ -954,8 +999,8 @@
             // 
             this.pictureBox24.BackColor = System.Drawing.Color.Black;
             this.pictureBox24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox24.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox24, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox24, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox24, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox24.Location = new System.Drawing.Point(512, 341);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(50, 50);
@@ -966,8 +1011,8 @@
             // pictureBox23
             // 
             this.pictureBox23.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox23, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox23, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox23, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox23.Location = new System.Drawing.Point(462, 341);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(50, 50);
@@ -978,8 +1023,8 @@
             // 
             this.pictureBox22.BackColor = System.Drawing.Color.Black;
             this.pictureBox22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox22.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox22, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox22, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox22, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox22.Location = new System.Drawing.Point(412, 341);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(50, 50);
@@ -990,8 +1035,8 @@
             // pictureBox21
             // 
             this.pictureBox21.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox21, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox21, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox21, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox21.Location = new System.Drawing.Point(362, 341);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(50, 50);
@@ -1002,8 +1047,8 @@
             // 
             this.pictureBox20.BackColor = System.Drawing.Color.Black;
             this.pictureBox20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox20.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox20, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox20, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox20, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox20.Location = new System.Drawing.Point(312, 341);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(50, 50);
@@ -1014,8 +1059,8 @@
             // pictureBox19
             // 
             this.pictureBox19.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox19, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox19, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox19, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox19.Location = new System.Drawing.Point(262, 341);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(50, 50);
@@ -1026,8 +1071,8 @@
             // 
             this.pictureBox18.BackColor = System.Drawing.Color.Black;
             this.pictureBox18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox18.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox18, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox18, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox18, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox18.Location = new System.Drawing.Point(212, 341);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(50, 50);
@@ -1038,8 +1083,8 @@
             // pictureBox17
             // 
             this.pictureBox17.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox17, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox17, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox17, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox17.Location = new System.Drawing.Point(162, 341);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(50, 50);
@@ -1049,8 +1094,8 @@
             // pictureBox32
             // 
             this.pictureBox32.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox32, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox32, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox32, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox32.Location = new System.Drawing.Point(512, 291);
             this.pictureBox32.Name = "pictureBox32";
             this.pictureBox32.Size = new System.Drawing.Size(50, 50);
@@ -1060,8 +1105,8 @@
             // pictureBox31
             // 
             this.pictureBox31.BackColor = System.Drawing.Color.Black;
-            this.PanelAnimator.SetDecoration(this.pictureBox31, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox31, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox31, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox31.Location = new System.Drawing.Point(462, 291);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(50, 50);
@@ -1072,8 +1117,8 @@
             // pictureBox30
             // 
             this.pictureBox30.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox30, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox30, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox30, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox30.Location = new System.Drawing.Point(412, 291);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(50, 50);
@@ -1083,8 +1128,8 @@
             // pictureBox29
             // 
             this.pictureBox29.BackColor = System.Drawing.Color.Black;
-            this.PanelAnimator.SetDecoration(this.pictureBox29, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox29, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox29, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox29.Location = new System.Drawing.Point(362, 291);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(50, 50);
@@ -1095,8 +1140,8 @@
             // pictureBox28
             // 
             this.pictureBox28.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox28, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox28, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox28, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox28.Location = new System.Drawing.Point(312, 291);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(50, 50);
@@ -1106,8 +1151,8 @@
             // pictureBox27
             // 
             this.pictureBox27.BackColor = System.Drawing.Color.Black;
-            this.PanelAnimator.SetDecoration(this.pictureBox27, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox27, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox27, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox27.Location = new System.Drawing.Point(262, 291);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(50, 50);
@@ -1118,8 +1163,8 @@
             // pictureBox26
             // 
             this.pictureBox26.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox26, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox26, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox26, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox26.Location = new System.Drawing.Point(212, 291);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(50, 50);
@@ -1129,8 +1174,8 @@
             // pictureBox25
             // 
             this.pictureBox25.BackColor = System.Drawing.Color.Black;
-            this.PanelAnimator.SetDecoration(this.pictureBox25, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox25, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox25, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox25.Location = new System.Drawing.Point(162, 291);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(50, 50);
@@ -1141,8 +1186,8 @@
             // pictureBox40
             // 
             this.pictureBox40.BackColor = System.Drawing.Color.Black;
-            this.PanelAnimator.SetDecoration(this.pictureBox40, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox40, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox40, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox40.Location = new System.Drawing.Point(512, 241);
             this.pictureBox40.Name = "pictureBox40";
             this.pictureBox40.Size = new System.Drawing.Size(50, 50);
@@ -1153,8 +1198,8 @@
             // pictureBox39
             // 
             this.pictureBox39.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox39, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox39, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox39, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox39.Location = new System.Drawing.Point(462, 241);
             this.pictureBox39.Name = "pictureBox39";
             this.pictureBox39.Size = new System.Drawing.Size(50, 50);
@@ -1164,8 +1209,8 @@
             // pictureBox38
             // 
             this.pictureBox38.BackColor = System.Drawing.Color.Black;
-            this.PanelAnimator.SetDecoration(this.pictureBox38, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox38, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox38, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox38.Location = new System.Drawing.Point(412, 241);
             this.pictureBox38.Name = "pictureBox38";
             this.pictureBox38.Size = new System.Drawing.Size(50, 50);
@@ -1176,8 +1221,8 @@
             // pictureBox37
             // 
             this.pictureBox37.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox37, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox37, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox37, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox37.Location = new System.Drawing.Point(362, 241);
             this.pictureBox37.Name = "pictureBox37";
             this.pictureBox37.Size = new System.Drawing.Size(50, 50);
@@ -1187,8 +1232,8 @@
             // pictureBox36
             // 
             this.pictureBox36.BackColor = System.Drawing.Color.Black;
-            this.PanelAnimator.SetDecoration(this.pictureBox36, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox36, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox36, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox36.Location = new System.Drawing.Point(312, 241);
             this.pictureBox36.Name = "pictureBox36";
             this.pictureBox36.Size = new System.Drawing.Size(50, 50);
@@ -1199,8 +1244,8 @@
             // pictureBox35
             // 
             this.pictureBox35.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox35, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox35, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox35, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox35.Location = new System.Drawing.Point(262, 241);
             this.pictureBox35.Name = "pictureBox35";
             this.pictureBox35.Size = new System.Drawing.Size(50, 50);
@@ -1210,8 +1255,8 @@
             // pictureBox34
             // 
             this.pictureBox34.BackColor = System.Drawing.Color.Black;
-            this.PanelAnimator.SetDecoration(this.pictureBox34, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox34, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox34, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox34.Location = new System.Drawing.Point(212, 241);
             this.pictureBox34.Name = "pictureBox34";
             this.pictureBox34.Size = new System.Drawing.Size(50, 50);
@@ -1222,8 +1267,8 @@
             // pictureBox33
             // 
             this.pictureBox33.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox33, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox33, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox33, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox33.Location = new System.Drawing.Point(162, 241);
             this.pictureBox33.Name = "pictureBox33";
             this.pictureBox33.Size = new System.Drawing.Size(50, 50);
@@ -1233,8 +1278,8 @@
             // pictureBox48
             // 
             this.pictureBox48.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox48, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox48, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox48, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox48.Location = new System.Drawing.Point(512, 191);
             this.pictureBox48.Name = "pictureBox48";
             this.pictureBox48.Size = new System.Drawing.Size(50, 50);
@@ -1245,8 +1290,8 @@
             // 
             this.pictureBox47.BackColor = System.Drawing.Color.Black;
             this.pictureBox47.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox47.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox47, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox47, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox47, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox47.Location = new System.Drawing.Point(462, 191);
             this.pictureBox47.Name = "pictureBox47";
             this.pictureBox47.Size = new System.Drawing.Size(50, 50);
@@ -1257,8 +1302,8 @@
             // pictureBox46
             // 
             this.pictureBox46.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox46, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox46, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox46, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox46.Location = new System.Drawing.Point(412, 191);
             this.pictureBox46.Name = "pictureBox46";
             this.pictureBox46.Size = new System.Drawing.Size(50, 50);
@@ -1269,8 +1314,8 @@
             // 
             this.pictureBox45.BackColor = System.Drawing.Color.Black;
             this.pictureBox45.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox45.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox45, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox45, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox45, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox45.Location = new System.Drawing.Point(362, 191);
             this.pictureBox45.Name = "pictureBox45";
             this.pictureBox45.Size = new System.Drawing.Size(50, 50);
@@ -1281,8 +1326,8 @@
             // pictureBox44
             // 
             this.pictureBox44.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox44, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox44, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox44, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox44.Location = new System.Drawing.Point(312, 191);
             this.pictureBox44.Name = "pictureBox44";
             this.pictureBox44.Size = new System.Drawing.Size(50, 50);
@@ -1293,8 +1338,8 @@
             // 
             this.pictureBox43.BackColor = System.Drawing.Color.Black;
             this.pictureBox43.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox43.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox43, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox43, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox43, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox43.Location = new System.Drawing.Point(262, 191);
             this.pictureBox43.Name = "pictureBox43";
             this.pictureBox43.Size = new System.Drawing.Size(50, 50);
@@ -1305,8 +1350,8 @@
             // pictureBox42
             // 
             this.pictureBox42.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox42, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox42, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox42, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox42.Location = new System.Drawing.Point(212, 191);
             this.pictureBox42.Name = "pictureBox42";
             this.pictureBox42.Size = new System.Drawing.Size(50, 50);
@@ -1317,8 +1362,8 @@
             // 
             this.pictureBox41.BackColor = System.Drawing.Color.Black;
             this.pictureBox41.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox41.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox41, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox41, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox41, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox41.Location = new System.Drawing.Point(162, 191);
             this.pictureBox41.Name = "pictureBox41";
             this.pictureBox41.Size = new System.Drawing.Size(50, 50);
@@ -1330,8 +1375,8 @@
             // 
             this.pictureBox56.BackColor = System.Drawing.Color.Black;
             this.pictureBox56.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox56.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox56, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox56, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox56, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox56.Location = new System.Drawing.Point(512, 141);
             this.pictureBox56.Name = "pictureBox56";
             this.pictureBox56.Size = new System.Drawing.Size(50, 50);
@@ -1342,8 +1387,8 @@
             // pictureBox55
             // 
             this.pictureBox55.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox55, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox55, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox55, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox55.Location = new System.Drawing.Point(462, 141);
             this.pictureBox55.Name = "pictureBox55";
             this.pictureBox55.Size = new System.Drawing.Size(50, 50);
@@ -1354,8 +1399,8 @@
             // 
             this.pictureBox54.BackColor = System.Drawing.Color.Black;
             this.pictureBox54.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox54.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox54, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox54, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox54, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox54.Location = new System.Drawing.Point(412, 141);
             this.pictureBox54.Name = "pictureBox54";
             this.pictureBox54.Size = new System.Drawing.Size(50, 50);
@@ -1366,8 +1411,8 @@
             // pictureBox53
             // 
             this.pictureBox53.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox53, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox53, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox53, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox53.Location = new System.Drawing.Point(362, 141);
             this.pictureBox53.Name = "pictureBox53";
             this.pictureBox53.Size = new System.Drawing.Size(50, 50);
@@ -1378,8 +1423,8 @@
             // 
             this.pictureBox52.BackColor = System.Drawing.Color.Black;
             this.pictureBox52.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox52.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox52, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox52, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox52, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox52.Location = new System.Drawing.Point(312, 141);
             this.pictureBox52.Name = "pictureBox52";
             this.pictureBox52.Size = new System.Drawing.Size(50, 50);
@@ -1390,8 +1435,8 @@
             // pictureBox51
             // 
             this.pictureBox51.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox51, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox51, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox51, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox51.Location = new System.Drawing.Point(262, 141);
             this.pictureBox51.Name = "pictureBox51";
             this.pictureBox51.Size = new System.Drawing.Size(50, 50);
@@ -1402,8 +1447,8 @@
             // 
             this.pictureBox50.BackColor = System.Drawing.Color.Black;
             this.pictureBox50.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox50.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox50, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox50, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox50, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox50.Location = new System.Drawing.Point(212, 141);
             this.pictureBox50.Name = "pictureBox50";
             this.pictureBox50.Size = new System.Drawing.Size(50, 50);
@@ -1414,8 +1459,8 @@
             // pictureBox49
             // 
             this.pictureBox49.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox49, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox49, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox49, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox49.Location = new System.Drawing.Point(162, 141);
             this.pictureBox49.Name = "pictureBox49";
             this.pictureBox49.Size = new System.Drawing.Size(50, 50);
@@ -1425,8 +1470,8 @@
             // pictureBox64
             // 
             this.pictureBox64.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox64, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox64, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox64, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox64.Location = new System.Drawing.Point(512, 91);
             this.pictureBox64.Name = "pictureBox64";
             this.pictureBox64.Size = new System.Drawing.Size(50, 50);
@@ -1437,8 +1482,8 @@
             // 
             this.pictureBox63.BackColor = System.Drawing.Color.Black;
             this.pictureBox63.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox63.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox63, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox63, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox63, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox63.Location = new System.Drawing.Point(462, 91);
             this.pictureBox63.Name = "pictureBox63";
             this.pictureBox63.Size = new System.Drawing.Size(50, 50);
@@ -1449,8 +1494,8 @@
             // pictureBox62
             // 
             this.pictureBox62.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox62, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox62, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox62, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox62.Location = new System.Drawing.Point(412, 91);
             this.pictureBox62.Name = "pictureBox62";
             this.pictureBox62.Size = new System.Drawing.Size(50, 50);
@@ -1461,8 +1506,8 @@
             // 
             this.pictureBox61.BackColor = System.Drawing.Color.Black;
             this.pictureBox61.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox61.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox61, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox61, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox61, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox61.Location = new System.Drawing.Point(362, 91);
             this.pictureBox61.Name = "pictureBox61";
             this.pictureBox61.Size = new System.Drawing.Size(50, 50);
@@ -1473,8 +1518,8 @@
             // pictureBox60
             // 
             this.pictureBox60.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox60, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox60, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox60, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox60.Location = new System.Drawing.Point(312, 91);
             this.pictureBox60.Name = "pictureBox60";
             this.pictureBox60.Size = new System.Drawing.Size(50, 50);
@@ -1485,8 +1530,8 @@
             // 
             this.pictureBox59.BackColor = System.Drawing.Color.Black;
             this.pictureBox59.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox59.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox59, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox59, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox59, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox59.Location = new System.Drawing.Point(262, 91);
             this.pictureBox59.Name = "pictureBox59";
             this.pictureBox59.Size = new System.Drawing.Size(50, 50);
@@ -1497,8 +1542,8 @@
             // pictureBox58
             // 
             this.pictureBox58.BackColor = System.Drawing.Color.PeachPuff;
-            this.PanelAnimator.SetDecoration(this.pictureBox58, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox58, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox58, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox58.Location = new System.Drawing.Point(212, 91);
             this.pictureBox58.Name = "pictureBox58";
             this.pictureBox58.Size = new System.Drawing.Size(50, 50);
@@ -1509,8 +1554,8 @@
             // 
             this.pictureBox57.BackColor = System.Drawing.Color.Black;
             this.pictureBox57.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox57.BackgroundImage")));
-            this.PanelAnimator.SetDecoration(this.pictureBox57, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox57, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox57, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox57.Location = new System.Drawing.Point(162, 91);
             this.pictureBox57.Name = "pictureBox57";
             this.pictureBox57.Size = new System.Drawing.Size(50, 50);
@@ -1522,8 +1567,8 @@
             // 
             this.pictureBox65.BackColor = System.Drawing.Color.SaddleBrown;
             this.pictureBox65.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PanelAnimator.SetDecoration(this.pictureBox65, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this.pictureBox65, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.pictureBox65, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox65.Location = new System.Drawing.Point(142, 71);
             this.pictureBox65.Name = "pictureBox65";
             this.pictureBox65.Size = new System.Drawing.Size(440, 440);
@@ -1550,27 +1595,6 @@
             // 
             this.PanelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.Custom;
             this.PanelAnimator.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 1F;
-            this.PanelAnimator.DefaultAnimation = animation1;
-            // 
-            // PanelAnimator2
-            // 
-            this.PanelAnimator2.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
-            this.PanelAnimator2.Cursor = null;
             animation2.AnimateOnlyDifferences = true;
             animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
             animation2.LeafCoeff = 0F;
@@ -1585,8 +1609,29 @@
             animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
             animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
             animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.PanelAnimator2.DefaultAnimation = animation2;
+            animation2.TransparencyCoeff = 1F;
+            this.PanelAnimator.DefaultAnimation = animation2;
+            // 
+            // PanelAnimator2
+            // 
+            this.PanelAnimator2.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
+            this.PanelAnimator2.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.PanelAnimator2.DefaultAnimation = animation1;
             // 
             // ViewJogo
             // 
@@ -1594,8 +1639,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 580);
             this.Controls.Add(this.bunifuGradientPanel1);
-            this.PanelAnimator.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator2.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewJogo";
@@ -1774,5 +1819,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton buttonMyProfileMenu;
         private Bunifu.Framework.UI.BunifuFlatButton buttonAboutMenu;
         private Bunifu.Framework.UI.BunifuFlatButton buttonRulesMenu;
+        private Bunifu.Framework.UI.BunifuFlatButton buttonLogoutMenu;
+        private System.Windows.Forms.ToolTip toolTipViewProfile;
     }
 }

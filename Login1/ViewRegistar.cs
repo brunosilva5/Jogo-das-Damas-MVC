@@ -13,16 +13,34 @@ using System.Globalization;
 
 namespace Login1
 {
-    
+
     public partial class ViewRegistar : Form
     {
+        public event MetodosComSeisString UserRegistered;
+
         List<string> cultureList = new List<string>();
         CultureInfo[] cultures = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
         RegionInfo region;
 
+        OpenFileDialog openPhoto;
+
+        public string Name { get { return textBoxNameRegistar.Text; } }
+        public string Username { get { return textboxUsernameRegistar.Text; } }
+        public string Password { get { return textboxPasswordRegistar.Text; } }
+        public string Photo { get { return openPhoto.FileName; } }
+        public string Email { get { return textBoxEmailRegistar.Text; } }
+        public string Country { get { return comboBox1.Text; } }
+
+
         public ViewRegistar()
         {
             InitializeComponent();
+
+            // configura o componente para escolher a fotografia
+            openPhoto = new OpenFileDialog();
+            openPhoto.CheckFileExists = true;
+            openPhoto.CheckPathExists = true;
+            openPhoto.Filter = "Imagens|*.jpg;*.png;*.bmp|Ficheiros JPG|*.jpg|Ficheiros PNG|*.png|Ficheiros BMP|*.bmp|Todos os Ficheiros|*.*";
         }
 
 
@@ -102,5 +120,31 @@ namespace Login1
             this.Close();
         }
 
+        private void buttonPhotoRegistar_Click(object sender, EventArgs e)
+        {
+            if (openPhoto.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
+
+        private void registarbutton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxNameRegistar.Text) ||
+                string.IsNullOrWhiteSpace(textboxUsernameRegistar.Text) ||
+                string.IsNullOrWhiteSpace(textboxPasswordRegistar.Text) ||
+                string.IsNullOrWhiteSpace(openPhoto.FileName))
+            {
+                MessageBox.Show("Falta preencher campos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (UserRegistered != null)
+                    UserRegistered(textboxUsernameRegistar.Text, textBoxNameRegistar.Text, textboxPasswordRegistar.Text, openPhoto.FileName, textBoxEmailRegistar.Text, comboBox1.Text);
+                this.DialogResult = DialogResult.Yes;
+                Close();
+            }
+
+        }
     }
 }

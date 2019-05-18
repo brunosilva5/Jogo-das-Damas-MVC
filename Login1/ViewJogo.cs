@@ -108,8 +108,13 @@ namespace Login1
             catch { }
 
             selecionado = (PictureBox)obj;
-            selecionado.BackColor = Color.Gold;
-            final = 1;
+            if (selecionado.BackgroundImage != null)
+            {
+                selecionado.BackColor = Color.Gold;
+                final = 1;
+            }
+            else return;
+            
         }
 
         private void Movimento(PictureBox destino)
@@ -235,6 +240,7 @@ namespace Login1
                 buttonExitMenu.Visible = false;
                 buttonAboutMenu.Visible = false;
                 buttonRulesMenu.Visible = false;
+                buttonLogoutMenu.Visible = false;
                 buttonSettingsJogo.BackColor = Color.Transparent;
                 PanelAnimator.ShowSync(panelsettings);
 
@@ -247,6 +253,7 @@ namespace Login1
                 buttonExitMenu.Visible = true;
                 buttonAboutMenu.Visible = true;
                 buttonRulesMenu.Visible = true;
+                buttonLogoutMenu.Visible = true;
                 panelsettings.BackColor = Color.Silver;
                 buttonSettingsJogo.BackColor = Color.Transparent;
                 PanelAnimator2.ShowSync(panelsettings);
@@ -269,7 +276,6 @@ namespace Login1
         {
             this.Close();
         }
-
 
         //--------------------------------------------------------------------
         private void pictureBoxplayer1_Click(object sender, EventArgs e)
@@ -305,6 +311,7 @@ namespace Login1
             buttonExitMenu.Visible = false;
             buttonAboutMenu.Visible = false;
             buttonRulesMenu.Visible = false;
+            buttonLogoutMenu.Visible = false;
             buttonSettingsJogo.BackColor = Color.Transparent;
             PanelAnimator.ShowSync(panelsettings);
 
@@ -316,6 +323,12 @@ namespace Login1
         {
             Process.Start("http://www.fpdamas.pt/downloads/Regras_Damas_Cl%C3%A1ssicas_.pdf");
         }
+
+        private void buttonLogoutMenu_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
 
         //--------------------------------------------------------------------
     }

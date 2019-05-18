@@ -20,27 +20,27 @@ namespace Login1
         private void buttonVSComputador_Click(object sender, EventArgs e)
         {
             Program.V_Jogo.ShowDialog();
-            this.Visible = false;
+            this.Hide();
 
         }
 
         private void buttonVSJogador_Click(object sender, EventArgs e)
         {
             Program.V_Jogo.ShowDialog();
-            this.Visible = false;
+            this.Hide();
 
         }
 
         private void buttonONLINE_Click(object sender, EventArgs e)
         {
             Program.V_Jogo.ShowDialog();
-            this.Visible = false;
+            this.Hide();
         }
 
         private void closeModeGame_Click(object sender, EventArgs e)
         {
             this.Close();
-            Program.V_Login.Visible = true;
+            Program.V_Login.ShowDialog();
         }
     }
 }

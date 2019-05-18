@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewPerfil));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.buttonUpdatePhoto = new Bunifu.Framework.UI.BunifuFlatButton();
             this.backbutton = new System.Windows.Forms.PictureBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -64,6 +65,7 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.buttonUpdatePhoto);
             this.bunifuGradientPanel1.Controls.Add(this.backbutton);
             this.bunifuGradientPanel1.Controls.Add(this.textBox9);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel9);
@@ -99,6 +101,41 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(850, 580);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // buttonUpdatePhoto
+            // 
+            this.buttonUpdatePhoto.Activecolor = System.Drawing.Color.DarkGray;
+            this.buttonUpdatePhoto.BackColor = System.Drawing.Color.Transparent;
+            this.buttonUpdatePhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonUpdatePhoto.BorderRadius = 0;
+            this.buttonUpdatePhoto.ButtonText = "       Update Photo";
+            this.buttonUpdatePhoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonUpdatePhoto.DisabledColor = System.Drawing.Color.Gray;
+            this.buttonUpdatePhoto.Iconcolor = System.Drawing.Color.Transparent;
+            this.buttonUpdatePhoto.Iconimage = ((System.Drawing.Image)(resources.GetObject("buttonUpdatePhoto.Iconimage")));
+            this.buttonUpdatePhoto.Iconimage_right = null;
+            this.buttonUpdatePhoto.Iconimage_right_Selected = null;
+            this.buttonUpdatePhoto.Iconimage_Selected = null;
+            this.buttonUpdatePhoto.IconMarginLeft = 0;
+            this.buttonUpdatePhoto.IconMarginRight = 0;
+            this.buttonUpdatePhoto.IconRightVisible = true;
+            this.buttonUpdatePhoto.IconRightZoom = 0D;
+            this.buttonUpdatePhoto.IconVisible = true;
+            this.buttonUpdatePhoto.IconZoom = 90D;
+            this.buttonUpdatePhoto.IsTab = false;
+            this.buttonUpdatePhoto.Location = new System.Drawing.Point(566, 333);
+            this.buttonUpdatePhoto.Name = "buttonUpdatePhoto";
+            this.buttonUpdatePhoto.Normalcolor = System.Drawing.Color.Transparent;
+            this.buttonUpdatePhoto.OnHovercolor = System.Drawing.Color.DarkGray;
+            this.buttonUpdatePhoto.OnHoverTextColor = System.Drawing.Color.White;
+            this.buttonUpdatePhoto.selected = false;
+            this.buttonUpdatePhoto.Size = new System.Drawing.Size(170, 30);
+            this.buttonUpdatePhoto.TabIndex = 40;
+            this.buttonUpdatePhoto.Text = "       Update Photo";
+            this.buttonUpdatePhoto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUpdatePhoto.Textcolor = System.Drawing.Color.White;
+            this.buttonUpdatePhoto.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdatePhoto.Click += new System.EventHandler(this.buttonUpdatePhoto_Click);
             // 
             // backbutton
             // 
@@ -333,10 +370,12 @@
             this.pictureBoxPerfil.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxPerfil.BackgroundImage")));
             this.pictureBoxPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxPerfil.InitialImage = null;
             this.pictureBoxPerfil.Location = new System.Drawing.Point(566, 127);
             this.pictureBoxPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxPerfil.Name = "pictureBoxPerfil";
             this.pictureBoxPerfil.Size = new System.Drawing.Size(170, 190);
+            this.pictureBoxPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxPerfil.TabIndex = 11;
             this.pictureBoxPerfil.TabStop = false;
             // 
@@ -433,5 +472,6 @@
         private System.Windows.Forms.TextBox textBox9;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
         private System.Windows.Forms.PictureBox backbutton;
+        private Bunifu.Framework.UI.BunifuFlatButton buttonUpdatePhoto;
     }
 }
