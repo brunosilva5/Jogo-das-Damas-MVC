@@ -1,4 +1,4 @@
-﻿namespace Login1
+﻿namespace CheckersGame
 {
     partial class ViewRegistar
     {
@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRegistar));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.textBoxEmailRegistar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.buttonPhotoRegistar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.textBoxNameRegistar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -48,8 +49,10 @@
             // 
             // bunifuGradientPanel1
             // 
+            this.bunifuGradientPanel1.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuDropdown1);
             this.bunifuGradientPanel1.Controls.Add(this.textBoxEmailRegistar);
             this.bunifuGradientPanel1.Controls.Add(this.buttonPhotoRegistar);
             this.bunifuGradientPanel1.Controls.Add(this.textBoxNameRegistar);
@@ -72,7 +75,20 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(850, 580);
             this.bunifuGradientPanel1.TabIndex = 0;
-            this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
+            // 
+            // bunifuDropdown1
+            // 
+            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdown1.BorderRadius = 3;
+            this.bunifuDropdown1.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            this.bunifuDropdown1.Items = new string[0];
+            this.bunifuDropdown1.Location = new System.Drawing.Point(14, 407);
+            this.bunifuDropdown1.Name = "bunifuDropdown1";
+            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuDropdown1.selectedIndex = -1;
+            this.bunifuDropdown1.Size = new System.Drawing.Size(217, 35);
+            this.bunifuDropdown1.TabIndex = 11;
             // 
             // textBoxEmailRegistar
             // 
@@ -91,9 +107,11 @@
             this.textBoxEmailRegistar.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxEmailRegistar.Name = "textBoxEmailRegistar";
             this.textBoxEmailRegistar.Size = new System.Drawing.Size(370, 44);
-            this.textBoxEmailRegistar.TabIndex = 42;
+            this.textBoxEmailRegistar.TabIndex = 2;
             this.textBoxEmailRegistar.Text = "Email";
             this.textBoxEmailRegistar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxEmailRegistar.Enter += new System.EventHandler(this.textBoxEmailRegistar_Enter);
+            this.textBoxEmailRegistar.Leave += new System.EventHandler(this.textBoxEmailRegistar_Leave);
             // 
             // buttonPhotoRegistar
             // 
@@ -116,14 +134,14 @@
             this.buttonPhotoRegistar.IconVisible = true;
             this.buttonPhotoRegistar.IconZoom = 90D;
             this.buttonPhotoRegistar.IsTab = false;
-            this.buttonPhotoRegistar.Location = new System.Drawing.Point(666, 352);
+            this.buttonPhotoRegistar.Location = new System.Drawing.Point(490, 407);
             this.buttonPhotoRegistar.Name = "buttonPhotoRegistar";
             this.buttonPhotoRegistar.Normalcolor = System.Drawing.Color.Transparent;
             this.buttonPhotoRegistar.OnHovercolor = System.Drawing.Color.DarkGray;
             this.buttonPhotoRegistar.OnHoverTextColor = System.Drawing.Color.White;
             this.buttonPhotoRegistar.selected = false;
             this.buttonPhotoRegistar.Size = new System.Drawing.Size(120, 30);
-            this.buttonPhotoRegistar.TabIndex = 41;
+            this.buttonPhotoRegistar.TabIndex = 10;
             this.buttonPhotoRegistar.Text = "       Photo";
             this.buttonPhotoRegistar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonPhotoRegistar.Textcolor = System.Drawing.Color.White;
@@ -147,9 +165,11 @@
             this.textBoxNameRegistar.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNameRegistar.Name = "textBoxNameRegistar";
             this.textBoxNameRegistar.Size = new System.Drawing.Size(370, 44);
-            this.textBoxNameRegistar.TabIndex = 11;
+            this.textBoxNameRegistar.TabIndex = 0;
             this.textBoxNameRegistar.Text = "Name";
             this.textBoxNameRegistar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxNameRegistar.Enter += new System.EventHandler(this.textBoxNameRegistar_Enter);
+            this.textBoxNameRegistar.Leave += new System.EventHandler(this.textBoxNameRegistar_Leave);
             // 
             // registarbutton
             // 
@@ -173,34 +193,36 @@
             this.registarbutton.Margin = new System.Windows.Forms.Padding(5);
             this.registarbutton.Name = "registarbutton";
             this.registarbutton.Size = new System.Drawing.Size(181, 41);
-            this.registarbutton.TabIndex = 10;
+            this.registarbutton.TabIndex = 5;
             this.registarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.registarbutton.Click += new System.EventHandler(this.registarbutton_Click);
             // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.Location = new System.Drawing.Point(237, 417);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(105, 17);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(59, 17);
             this.bunifuCustomLabel2.TabIndex = 9;
-            this.bunifuCustomLabel2.Text = "Nacionalidade";
+            this.bunifuCustomLabel2.Text = "Country";
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(237, 365);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(144, 17);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(95, 17);
             this.bunifuCustomLabel1.TabIndex = 8;
-            this.bunifuCustomLabel1.Text = "Data de Nascimento";
+            this.bunifuCustomLabel1.Text = "Birthday Date";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(489, 413);
+            this.comboBox1.Location = new System.Drawing.Point(323, 416);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 7;
@@ -227,7 +249,7 @@
             this.bunifuDatepicker1.Location = new System.Drawing.Point(409, 352);
             this.bunifuDatepicker1.Name = "bunifuDatepicker1";
             this.bunifuDatepicker1.Size = new System.Drawing.Size(201, 36);
-            this.bunifuDatepicker1.TabIndex = 4;
+            this.bunifuDatepicker1.TabIndex = 10;
             this.bunifuDatepicker1.Value = new System.DateTime(2019, 3, 21, 19, 17, 30, 885);
             // 
             // textboxConfirmarPassword
@@ -247,7 +269,7 @@
             this.textboxConfirmarPassword.Margin = new System.Windows.Forms.Padding(4);
             this.textboxConfirmarPassword.Name = "textboxConfirmarPassword";
             this.textboxConfirmarPassword.Size = new System.Drawing.Size(370, 44);
-            this.textboxConfirmarPassword.TabIndex = 2;
+            this.textboxConfirmarPassword.TabIndex = 4;
             this.textboxConfirmarPassword.Text = "Confirm Password";
             this.textboxConfirmarPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textboxConfirmarPassword.Enter += new System.EventHandler(this.textboxConfirmarPassword_Enter);
@@ -270,7 +292,7 @@
             this.textboxPasswordRegistar.Margin = new System.Windows.Forms.Padding(4);
             this.textboxPasswordRegistar.Name = "textboxPasswordRegistar";
             this.textboxPasswordRegistar.Size = new System.Drawing.Size(370, 44);
-            this.textboxPasswordRegistar.TabIndex = 1;
+            this.textboxPasswordRegistar.TabIndex = 3;
             this.textboxPasswordRegistar.Text = "Password";
             this.textboxPasswordRegistar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textboxPasswordRegistar.Enter += new System.EventHandler(this.textboxPasswordRegistar_Enter);
@@ -293,7 +315,7 @@
             this.textboxUsernameRegistar.Margin = new System.Windows.Forms.Padding(4);
             this.textboxUsernameRegistar.Name = "textboxUsernameRegistar";
             this.textboxUsernameRegistar.Size = new System.Drawing.Size(370, 44);
-            this.textboxUsernameRegistar.TabIndex = 0;
+            this.textboxUsernameRegistar.TabIndex = 1;
             this.textboxUsernameRegistar.Text = "Username";
             this.textboxUsernameRegistar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textboxUsernameRegistar.Enter += new System.EventHandler(this.UsernameEnter);
@@ -307,8 +329,10 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "ViewRegistar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registar";
+            this.Load += new System.EventHandler(this.ViewRegistar_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backbutton)).EndInit();
@@ -331,5 +355,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxNameRegistar;
         private Bunifu.Framework.UI.BunifuFlatButton buttonPhotoRegistar;
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxEmailRegistar;
+        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
     }
 }

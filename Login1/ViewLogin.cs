@@ -8,28 +8,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Login1
+namespace CheckersGame
 {
     public partial class ViewLogin : Form
     {
         public event MetodosSemParametros UserQuit;
-        public event MetodosSemParametros UserWantSignup;
         public event MetodosComDuasString UserLogin;
 
 
         public ViewLogin()
         {
             InitializeComponent();
+            Program.M_Damas.LoginSuccessful += M_Damas_LoginSuccessful;
         }
 
         private void signupbutton_Click(object sender, EventArgs e)
         {
-            if (UserWantSignup != null) UserWantSignup();
+            this.Hide();
+            Program.V_Registar.Show(); //Showdialog não funciona corretamente 
         }
-
         private void loginbutton_Click(object sender, EventArgs e)
         {
             if (UserLogin != null) UserLogin(textboxUsername.Text, textboxPassword.Text);
+
+        }
+        private void M_Damas_LoginSuccessful()
+        {
+            this.Hide();
+            Program.V_ModoJogo.ShowDialog();
         }
 
 

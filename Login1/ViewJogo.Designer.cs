@@ -1,4 +1,4 @@
-﻿namespace Login1
+﻿namespace CheckersGame
 {
     partial class ViewJogo
     {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace Login1
+namespace CheckersGame
 {
     public partial class ViewJogo : Form
     {

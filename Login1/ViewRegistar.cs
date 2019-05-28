@@ -9,32 +9,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Globalization;
+using System.IO;
 
-
-namespace Login1
+namespace CheckersGame
 {
 
     public partial class ViewRegistar : Form
     {
         public event MetodosComSeisString UserRegistered;
-
-        List<string> cultureList = new List<string>();
-        CultureInfo[] cultures = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
-        RegionInfo region;
+        public event MetodosSemParametros ComboBoxCountries;
 
         OpenFileDialog openPhoto;
-
-        public string Name { get { return textBoxNameRegistar.Text; } }
-        public string Username { get { return textboxUsernameRegistar.Text; } }
-        public string Password { get { return textboxPasswordRegistar.Text; } }
-        public string Photo { get { return openPhoto.FileName; } }
-        public string Email { get { return textBoxEmailRegistar.Text; } }
-        public string Country { get { return comboBox1.Text; } }
 
 
         public ViewRegistar()
         {
             InitializeComponent();
+            Program.M_Damas.msg += M_Damas_msg;
+            Program.M_Damas.CountriesComboBox += M_Damas_CountriesComboBox;
 
             // configura o componente para escolher a fotografia
             openPhoto = new OpenFileDialog();
@@ -43,37 +35,46 @@ namespace Login1
             openPhoto.Filter = "Imagens|*.jpg;*.png;*.bmp|Ficheiros JPG|*.jpg|Ficheiros PNG|*.png|Ficheiros BMP|*.bmp|Todos os Ficheiros|*.*";
         }
 
-
-        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        private void M_Damas_CountriesComboBox(List<string> countries)
         {
-            foreach (CultureInfo culture in cultures)
+            //add list à combobox
+            comboBox1.Items.Add(countries);
+            
+            bunifuDropdown1.AddItem(Convert.ToString(countries));
+        }
+
+        private void ViewRegistar_Load(object sender, EventArgs e)
+        {
+            if (ComboBoxCountries != null)
             {
-                region = new RegionInfo(culture.LCID);
-
-                if (!(cultureList.Contains(region.EnglishName)))
-                {
-                    cultureList.Add(region.EnglishName);
-
-                    comboBox1.Items.Add(region.EnglishName);
-                }
+                ComboBoxCountries();
             }
         }
 
-
         //---------------------------------------------------------------------
+        private void textBoxNameRegistar_Enter(object sender, EventArgs e)
+        {
+            if (textBoxNameRegistar.Text == "Name") textBoxNameRegistar.Text = "";
+        }
+        private void textBoxNameRegistar_Leave(object sender, EventArgs e)
+        {
+            if (textBoxNameRegistar.Text == "") textBoxNameRegistar.Text = "Name";
+        }
         private void UsernameEnter(object sender, EventArgs e)
         {
-            if (textboxUsernameRegistar.Text == "Username")
-            {
-                textboxUsernameRegistar.Text = "";
-            }
+            if (textboxUsernameRegistar.Text == "Username") textboxUsernameRegistar.Text = "";
         }
         private void UsernameLeave(object sender, EventArgs e)
         {
-            if (textboxUsernameRegistar.Text == "")
-            {
-                textboxUsernameRegistar.Text = "Username";
-            }
+            if (textboxUsernameRegistar.Text == "") textboxUsernameRegistar.Text = "Username";
+        }
+        private void textBoxEmailRegistar_Enter(object sender, EventArgs e)
+        {
+            if (textBoxEmailRegistar.Text == "Email") textBoxEmailRegistar.Text = "";
+        }
+        private void textBoxEmailRegistar_Leave(object sender, EventArgs e)
+        {
+            if (textBoxEmailRegistar.Text == "") textBoxEmailRegistar.Text = "Email";
         }
         private void textboxPasswordRegistar_Enter(object sender, EventArgs e)
         {
@@ -123,9 +124,7 @@ namespace Login1
         private void buttonPhotoRegistar_Click(object sender, EventArgs e)
         {
             if (openPhoto.ShowDialog() == DialogResult.OK)
-            {
-
-            }
+            { }
         }
 
         private void registarbutton_Click(object sender, EventArgs e)
@@ -135,16 +134,25 @@ namespace Login1
                 string.IsNullOrWhiteSpace(textboxPasswordRegistar.Text) ||
                 string.IsNullOrWhiteSpace(openPhoto.FileName))
             {
-                MessageBox.Show("Falta preencher campos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Missing fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (textboxPasswordRegistar.Text != textboxConfirmarPassword.Text)
+            {
+                MessageBox.Show("Password doesn't mach");
             }
             else
             {
                 if (UserRegistered != null)
                     UserRegistered(textboxUsernameRegistar.Text, textBoxNameRegistar.Text, textboxPasswordRegistar.Text, openPhoto.FileName, textBoxEmailRegistar.Text, comboBox1.Text);
                 this.DialogResult = DialogResult.Yes;
-                Close();
             }
 
         }
+
+        private void M_Damas_msg(string msg)
+        {
+            MessageBox.Show(msg);
+        }
+
     }
 }

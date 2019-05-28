@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-namespace Login1
+namespace CheckersGame
 {
-    public class Player
+    public abstract class Player
     {
         //public List<Peca> ListaPecas { get; set; }
         //public List<Peca> ListaPecasComidas { get; set; }
@@ -26,5 +26,6 @@ namespace Login1
             //ListaPecas = new List<Peca>();
             //ListaPecasComidas = new List<Peca>();
         }
+
     }
 }

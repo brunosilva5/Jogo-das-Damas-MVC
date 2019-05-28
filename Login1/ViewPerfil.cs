@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Login1
+namespace CheckersGame
 {
     public partial class ViewPerfil : Form
     {

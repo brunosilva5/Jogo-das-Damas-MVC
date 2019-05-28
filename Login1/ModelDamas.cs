@@ -8,56 +8,42 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
 
-namespace Login1
+namespace CheckersGame
 {
     public class ModelDamas
     {
-        public event ListaJogadoresDelegate PlayerAdd;
+        public event MetodosComSeisString AddPlayer;
+        public event MensagemErro msg;
+        public event MetodosSemParametros LoginSuccessful;
 
-        public List<PReal> Players { get; private set; }
+        public event ListCountries CountriesComboBox;
 
         public ModelDamas()
         {
-            Players = new List<PReal>();
+            
         }
 
-
-
-        public void AddPlayer(PReal p)
+        public bool IsValidEmail(string email)
         {
-            Players.Add(p);
-            if (PlayerAdd != null) PlayerAdd(Players);
-        }
-
-        public void WantSignup()
-        {
-            Program.V_Login.Hide();
-            ViewRegistar registar = new ViewRegistar();
-
-            registar.UserRegistered += Registar_UserRegistered;
-
-            if (registar.ShowDialog() == System.Windows.Forms.DialogResult.Yes)
+            try
             {
-                PReal p = new PReal();
-                p.Name = registar.Name;
-                p.Username = registar.Username;
-                p.Password = registar.Password;
-                p.Photo = Image.FromFile("Photos\\" + Path.GetFileName(registar.Photo));
-                p.Email = registar.Email;
-                p.Country = registar.Country;
-
-                AddPlayer(p);
-
-                Program.V_ModoJogo.ShowDialog();
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
             }
-            else
+            catch
             {
-                Program.V_Login.ShowDialog();
+                return false;
             }
         }
 
-        private void Registar_UserRegistered(string s1, string s2, string s3, string s4, string s5, string s6)
+        public void UserRegistered(string s1, string s2, string s3, string s4, string s5, string s6)
         {
+            if (IsValidEmail(s5)==false)
+            {
+                if (msg != null) msg("Email not valid!");
+                return;
+            }
+
             //Obtem o caminho fisico para a pasta do código da aplicação
             //para poder reutilizar a base de dados, caso contrário, ele está sempre a substituir
             var folder = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug", "");
@@ -75,34 +61,41 @@ namespace Login1
             //obter o nome do ficheiro
             string filename = System.IO.Path.GetFileName(s4);
 
+            //Encriptar Password
+            var hash = SecurePasswordHashed.Hash(s3);
+
             //construir a string SQL de insert nas tabelas
             // para aplicações reais devem usar SQL parameters e não string directas 
             string comando = String.Format("INSERT INTO Users" +
                                             "(UserName, Name, Password, Photo, Email, Country, NumGames, NumWins, NumDefeats, NumLeave) values " +
                                             "( '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}')",
-                                            s1, s2, s3, filename, s5, s6, "0", "0", "0", "0");
+                                            s1, s2, hash, filename, s5, s6, "0", "0", "0", "0");
 
             //construir o comando SQL com a ligação ao servidor
             SqlCommand command = new SqlCommand(comando, server);
 
             //executar o comando sem expectativa de receber resultados (usar para INSERTS, UPDATES, DELETE)
             //o metodo devolve o numero de linhas modificadas pela query enviada
-            int result = command.ExecuteNonQuery();
+            int result = 0;
+            try
+            {
+                result = command.ExecuteNonQuery();
+            }
+            catch (SqlException)
+            {
+                if (msg!=null)
+                {
+                    msg("Username já existe!");
+                    return;
+                }
+            }
+            
 
             //fechar sempre a ligação quando deixa de ser necessária
             server.Close();
+            // se o resultado for 1, significa que adicionou correctamente o utilizador
+            if (result == 1) System.IO.File.Copy(s4, "Photos\\" + filename, true); //guardar copia do ficheiro na pasta fotos
 
-            if (result == 1)  // se o resultado for 1, significa que adicionou correctamente o utilizador
-            {
-                //guardar copia do ficheiro na pasta fotos
-                System.IO.File.Copy(s4,"Photos\\" + filename, true);
-
-            }
-            else
-            {
-                // não inseriu na base de dados, não fazemos nada
-
-            }
         }
 
         public void Login(string username, string password)
@@ -123,8 +116,8 @@ namespace Login1
             //construir a string SQL de insert nas tabelas
             // para aplicações reais devem usar SQL parameters e não string directas 
             string cmdText = string.Format(" SELECT * FROM Users WHERE " +
-                                            "username = '{0}' and password = '{1}'",
-                                            username, password);
+                                            "username = '{0}'",
+                                            username);
 
             //construir o comando SQL com a ligação ao servidor
             SqlCommand command = new SqlCommand(cmdText, server);
@@ -137,30 +130,49 @@ namespace Login1
 
                 dados.Read(); //lê uma linha dos resultados, este metodo retorna um bool para informar se conseguiu ler ou não
 
-                PReal p = new PReal();
-                //ler os dados, com o nome das colunas como identificador
-                p.Name = dados["Name"].ToString();
-                p.Username = dados["Username"].ToString();
-                p.Password = dados["Password"].ToString();
+                if (SecurePasswordHashed.Verify(password, dados["Password"].ToString()))
+                {
+                    if (AddPlayer != null) AddPlayer(dados["Name"].ToString(), dados["Username"].ToString(), dados["Password"].ToString(),
+                           dados["Country"].ToString(), dados["Email"].ToString(), dados["Photo"].ToString());
 
-                p.Photo = Image.FromFile("Photos\\" + dados["Photo"].ToString());
+                    //fechar sempre a ligação ao servidor quando não é mais necessária
+                    server.Close();
 
-                //fechar sempre a ligação ao servidor quando não é mais necessária
-                server.Close();
-
-                AddPlayer(p); // assume que o jogador entrou e adiciona-o ao jogo
-                Program.V_Login.Hide();
-                Program.V_ModoJogo.ShowDialog();
+                    if (LoginSuccessful != null) LoginSuccessful();
+                }
+                else
+                {
+                    if (msg != null) msg("Invalid login credentials");
+                    server.Close();//
+                }
             }
-            else // o login é invalido
+            else // Não encontrou username
             {
-                MessageBox.Show("Credenciais erradas!","Login",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                if (msg != null) msg("Username not found");
             }
         }
 
         public void Quit()
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        public void UpdateComboBox()
+        {
+            if (CountriesComboBox!=null)
+            {
+                List<string> countries = new List<string>();
+                FileStream fp = new FileStream("countries.txt", FileMode.Open, FileAccess.Read);
+                StreamReader reader = new StreamReader(fp);
+                string countrytxt;
+                while ((countrytxt = reader.ReadLine()) != null)
+                {
+                    countries.Add(countrytxt);
+                }
+                reader.Close();
+                fp.Close();
+                CountriesComboBox(countries);
+            }
         }
 
     }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Login1
+namespace CheckersGame
 {
     public class PVirtual : Player
     {

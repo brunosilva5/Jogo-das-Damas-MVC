@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D820828A-C75B-408F-A25F-FC5AA23DAB55}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Login1</RootNamespace>
+    <RootNamespace>CheckersGame</RootNamespace>
     <AssemblyName>Login1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -74,6 +74,7 @@
     <Compile Include="PVirtual.cs" />
     <Compile Include="ModelDamas.cs" />
     <Compile Include="Peca.cs" />
+    <Compile Include="SecurePasswordHashed.cs" />
     <Compile Include="ViewAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +130,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ViewModoJogo.resx">
       <DependentUpon>ViewModoJogo.cs</DependentUpon>

@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Login1
+namespace CheckersGame
 {
     public partial class ViewModoJogo : Form
     {
+        public new Menu Menu{ get; set; }
+
         public ViewModoJogo()
         {
             InitializeComponent();
