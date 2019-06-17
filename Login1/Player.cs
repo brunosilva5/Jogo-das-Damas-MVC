@@ -9,8 +9,8 @@ namespace CheckersGame
 {
     public abstract class Player
     {
-        //public List<Peca> ListaPecas { get; set; }
-        //public List<Peca> ListaPecasComidas { get; set; }
+        public List<Peca> ListaPecas { get; set; }
+        public List<Peca> ListaPecasComidas { get; set; }
 
         public string Name { get; set; }
         public Image Photo { get; set; }
@@ -20,11 +20,12 @@ namespace CheckersGame
         public int NumLeave { get; set; }
 
         public Color Color { get; set; }
+        public bool Turn { get; set; }
 
         public Player()
         {
-            //ListaPecas = new List<Peca>();
-            //ListaPecasComidas = new List<Peca>();
+            Turn = false;
+            ListaPecas = new List<Peca>();
         }
 
     }

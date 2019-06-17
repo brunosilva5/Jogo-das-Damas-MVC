@@ -12,7 +12,7 @@ namespace CheckersGame
 {
     public partial class ViewModoJogo : Form
     {
-        public new Menu Menu{ get; set; }
+        public event MetodosComUmInteiro DefineGameMode;
 
         public ViewModoJogo()
         {
@@ -21,20 +21,21 @@ namespace CheckersGame
 
         private void buttonVSComputador_Click(object sender, EventArgs e)
         {
+            if (DefineGameMode != null) DefineGameMode(0);
             Program.V_Jogo.ShowDialog();
             this.Hide();
-
         }
 
         private void buttonVSJogador_Click(object sender, EventArgs e)
         {
+            if (DefineGameMode != null) DefineGameMode(1);
             Program.V_Jogo.ShowDialog();
             this.Hide();
-
         }
 
         private void buttonONLINE_Click(object sender, EventArgs e)
         {
+            if (DefineGameMode != null) DefineGameMode(2);
             Program.V_Jogo.ShowDialog();
             this.Hide();
         }

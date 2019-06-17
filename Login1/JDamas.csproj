@@ -67,7 +67,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControllerDamas.cs" />
+    <Compile Include="ControllerTabuleiro.cs" />
     <Compile Include="Delegate.cs" />
+    <Compile Include="GuessPlayer.cs" />
+    <Compile Include="ModelTabuleiro.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Jogo.cs" />
     <Compile Include="PReal.cs" />
@@ -124,14 +127,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="ViewModoJogo.resx">
       <DependentUpon>ViewModoJogo.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +152,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\clara.png" />
     <Content Include="Utilizadores.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -174,6 +172,10 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\Photos\" />
+    <Folder Include="Imagens\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

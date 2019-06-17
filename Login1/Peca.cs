@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace CheckersGame
 {
-    class Peca
+    public class Peca
     {
-        bool _branca;
-        string _posicao;
-
-        public Peca(bool branca, string posicao)
+        public Peca(Color cor, Point posicao, bool dama)
         {
-            Branca = branca;
-            _posicao = posicao;
+            Cor = cor;
+            Posicao = posicao;
+            Dama = dama;
         }
 
-        public string Posicao { get => _posicao; set => _posicao = value; }
-        public bool Branca { get => _branca; set => _branca = value; }
+        public Point Posicao { get; set; }
+        public Color Cor { get; private set; }
+        public bool Dama { get; set; }
     }
 }

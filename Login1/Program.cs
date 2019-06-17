@@ -16,8 +16,10 @@ namespace CheckersGame
         public static ViewAbout V_About { get; private set; }
 
         public static ControllerDamas C_Damas { get; private set; }
+        public static ControllerTabuleiro C_Tabuleiro { get; private set; }
 
         public static ModelDamas M_Damas { get; private set; }
+        public static ModelTabuleiro M_Tabuleiro { get; private set; }
 
 
         /// <summary>
@@ -28,8 +30,9 @@ namespace CheckersGame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             M_Damas = new ModelDamas();
+
+            M_Tabuleiro = new ModelTabuleiro();
 
             V_Login = new ViewLogin();
             V_Registar = new ViewRegistar();
@@ -39,6 +42,7 @@ namespace CheckersGame
             V_About = new ViewAbout();
 
             C_Damas = new ControllerDamas();
+            C_Tabuleiro = new ControllerTabuleiro();
 
             Application.Run(V_Login);
         }

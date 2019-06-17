@@ -33,9 +33,9 @@
             BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.labelplayer2 = new System.Windows.Forms.Label();
+            this.labelplayerwhite = new System.Windows.Forms.Label();
             this.pictureBoxplayer2 = new System.Windows.Forms.PictureBox();
-            this.labelplayer1 = new System.Windows.Forms.Label();
+            this.labelplayerblack = new System.Windows.Forms.Label();
             this.pictureBoxplayer1 = new System.Windows.Forms.PictureBox();
             this.panelsettings = new System.Windows.Forms.Panel();
             this.buttonLogoutMenu = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -129,6 +129,7 @@
             this.PanelAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.PanelAnimator2 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.toolTipViewProfile = new System.Windows.Forms.ToolTip(this.components);
+            this.labelWin = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxplayer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxplayer1)).BeginInit();
@@ -207,9 +208,10 @@
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.labelplayer2);
+            this.bunifuGradientPanel1.Controls.Add(this.labelWin);
+            this.bunifuGradientPanel1.Controls.Add(this.labelplayerwhite);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBoxplayer2);
-            this.bunifuGradientPanel1.Controls.Add(this.labelplayer1);
+            this.bunifuGradientPanel1.Controls.Add(this.labelplayerblack);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBoxplayer1);
             this.bunifuGradientPanel1.Controls.Add(this.panelsettings);
             this.bunifuGradientPanel1.Controls.Add(this.labelC8);
@@ -307,25 +309,27 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(850, 580);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
-            // labelplayer2
+            // labelplayerwhite
             // 
-            this.labelplayer2.AutoSize = true;
-            this.PanelAnimator2.SetDecoration(this.labelplayer2, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimator.SetDecoration(this.labelplayer2, BunifuAnimatorNS.DecorationType.None);
-            this.labelplayer2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelplayer2.Location = new System.Drawing.Point(667, 316);
-            this.labelplayer2.Name = "labelplayer2";
-            this.labelplayer2.Size = new System.Drawing.Size(82, 22);
-            this.labelplayer2.TabIndex = 197;
-            this.labelplayer2.Text = "Player 2";
+            this.labelplayerwhite.AutoSize = true;
+            this.PanelAnimator2.SetDecoration(this.labelplayerwhite, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelplayerwhite, BunifuAnimatorNS.DecorationType.None);
+            this.labelplayerwhite.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelplayerwhite.Location = new System.Drawing.Point(667, 319);
+            this.labelplayerwhite.Name = "labelplayerwhite";
+            this.labelplayerwhite.Size = new System.Drawing.Size(82, 22);
+            this.labelplayerwhite.TabIndex = 197;
+            this.labelplayerwhite.Text = "Player 2";
+            this.labelplayerwhite.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxplayer2
             // 
-            this.pictureBoxplayer2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxplayer2.BackgroundImage")));
             this.pictureBoxplayer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxplayer2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PanelAnimator2.SetDecoration(this.pictureBoxplayer2, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBoxplayer2, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBoxplayer2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxplayer2.Image")));
+            this.pictureBoxplayer2.ImageLocation = "";
             this.pictureBoxplayer2.Location = new System.Drawing.Point(647, 341);
             this.pictureBoxplayer2.Name = "pictureBoxplayer2";
             this.pictureBoxplayer2.Size = new System.Drawing.Size(122, 100);
@@ -334,25 +338,26 @@
             this.toolTipViewProfile.SetToolTip(this.pictureBoxplayer2, "View Profile");
             this.pictureBoxplayer2.Click += new System.EventHandler(this.pictureBoxplayer2_Click);
             // 
-            // labelplayer1
+            // labelplayerblack
             // 
-            this.labelplayer1.AutoSize = true;
-            this.PanelAnimator2.SetDecoration(this.labelplayer1, BunifuAnimatorNS.DecorationType.None);
-            this.PanelAnimator.SetDecoration(this.labelplayer1, BunifuAnimatorNS.DecorationType.None);
-            this.labelplayer1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelplayer1.Location = new System.Drawing.Point(667, 99);
-            this.labelplayer1.Name = "labelplayer1";
-            this.labelplayer1.Size = new System.Drawing.Size(82, 22);
-            this.labelplayer1.TabIndex = 195;
-            this.labelplayer1.Text = "Player 1";
+            this.labelplayerblack.AutoSize = true;
+            this.PanelAnimator2.SetDecoration(this.labelplayerblack, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelplayerblack, BunifuAnimatorNS.DecorationType.None);
+            this.labelplayerblack.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelplayerblack.Location = new System.Drawing.Point(667, 99);
+            this.labelplayerblack.Name = "labelplayerblack";
+            this.labelplayerblack.Size = new System.Drawing.Size(82, 22);
+            this.labelplayerblack.TabIndex = 195;
+            this.labelplayerblack.Text = "Player 1";
+            this.labelplayerblack.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxplayer1
             // 
-            this.pictureBoxplayer1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxplayer1.BackgroundImage")));
-            this.pictureBoxplayer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxplayer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBoxplayer1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PanelAnimator2.SetDecoration(this.pictureBoxplayer1, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBoxplayer1, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBoxplayer1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxplayer1.Image")));
             this.pictureBoxplayer1.Location = new System.Drawing.Point(647, 124);
             this.pictureBoxplayer1.Name = "pictureBoxplayer1";
             this.pictureBoxplayer1.Size = new System.Drawing.Size(122, 100);
@@ -806,14 +811,15 @@
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Black;
-            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox8, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox8, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
             this.pictureBox8.Location = new System.Drawing.Point(512, 441);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(50, 50);
             this.pictureBox8.TabIndex = 152;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Tag = "White";
             this.pictureBox8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox7
@@ -830,14 +836,15 @@
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Black;
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox6, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox6, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(412, 441);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(50, 50);
             this.pictureBox6.TabIndex = 150;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Tag = "White";
             this.pictureBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox5
@@ -854,14 +861,15 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Black;
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(312, 441);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.TabIndex = 148;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Tag = "White";
             this.pictureBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox3
@@ -878,14 +886,15 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Black;
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(212, 441);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.TabIndex = 146;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Tag = "White";
             this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox1
@@ -913,14 +922,15 @@
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Black;
-            this.pictureBox15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox15.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox15, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox15, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
             this.pictureBox15.Location = new System.Drawing.Point(462, 391);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(50, 50);
             this.pictureBox15.TabIndex = 143;
             this.pictureBox15.TabStop = false;
+            this.pictureBox15.Tag = "White";
             this.pictureBox15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox14
@@ -937,14 +947,15 @@
             // pictureBox13
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.Black;
-            this.pictureBox13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox13.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox13, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox13, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
             this.pictureBox13.Location = new System.Drawing.Point(362, 391);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(50, 50);
             this.pictureBox13.TabIndex = 141;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.Tag = "White";
             this.pictureBox13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox12
@@ -961,14 +972,15 @@
             // pictureBox11
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Black;
-            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox11, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox11, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
             this.pictureBox11.Location = new System.Drawing.Point(262, 391);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(50, 50);
             this.pictureBox11.TabIndex = 139;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.Tag = "White";
             this.pictureBox11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox10
@@ -985,27 +997,29 @@
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Black;
-            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox9, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox9, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
             this.pictureBox9.Location = new System.Drawing.Point(162, 391);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(50, 50);
             this.pictureBox9.TabIndex = 137;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Tag = "White";
             this.pictureBox9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox24
             // 
             this.pictureBox24.BackColor = System.Drawing.Color.Black;
-            this.pictureBox24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox24.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox24, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox24, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox24.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox24.Image")));
             this.pictureBox24.Location = new System.Drawing.Point(512, 341);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(50, 50);
             this.pictureBox24.TabIndex = 136;
             this.pictureBox24.TabStop = false;
+            this.pictureBox24.Tag = "White";
             this.pictureBox24.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox23
@@ -1022,14 +1036,15 @@
             // pictureBox22
             // 
             this.pictureBox22.BackColor = System.Drawing.Color.Black;
-            this.pictureBox22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox22.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox22, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox22, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
             this.pictureBox22.Location = new System.Drawing.Point(412, 341);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(50, 50);
             this.pictureBox22.TabIndex = 134;
             this.pictureBox22.TabStop = false;
+            this.pictureBox22.Tag = "White";
             this.pictureBox22.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox21
@@ -1046,14 +1061,15 @@
             // pictureBox20
             // 
             this.pictureBox20.BackColor = System.Drawing.Color.Black;
-            this.pictureBox20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox20.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox20, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox20, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
             this.pictureBox20.Location = new System.Drawing.Point(312, 341);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(50, 50);
             this.pictureBox20.TabIndex = 132;
             this.pictureBox20.TabStop = false;
+            this.pictureBox20.Tag = "White";
             this.pictureBox20.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox19
@@ -1070,14 +1086,15 @@
             // pictureBox18
             // 
             this.pictureBox18.BackColor = System.Drawing.Color.Black;
-            this.pictureBox18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox18.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox18, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox18, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
             this.pictureBox18.Location = new System.Drawing.Point(212, 341);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(50, 50);
             this.pictureBox18.TabIndex = 130;
             this.pictureBox18.TabStop = false;
+            this.pictureBox18.Tag = "White";
             this.pictureBox18.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox17
@@ -1289,14 +1306,15 @@
             // pictureBox47
             // 
             this.pictureBox47.BackColor = System.Drawing.Color.Black;
-            this.pictureBox47.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox47.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox47, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox47, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox47.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox47.Image")));
             this.pictureBox47.Location = new System.Drawing.Point(462, 191);
             this.pictureBox47.Name = "pictureBox47";
             this.pictureBox47.Size = new System.Drawing.Size(50, 50);
             this.pictureBox47.TabIndex = 111;
             this.pictureBox47.TabStop = false;
+            this.pictureBox47.Tag = "Black";
             this.pictureBox47.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox46
@@ -1313,14 +1331,15 @@
             // pictureBox45
             // 
             this.pictureBox45.BackColor = System.Drawing.Color.Black;
-            this.pictureBox45.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox45.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox45, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox45, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox45.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox45.Image")));
             this.pictureBox45.Location = new System.Drawing.Point(362, 191);
             this.pictureBox45.Name = "pictureBox45";
             this.pictureBox45.Size = new System.Drawing.Size(50, 50);
             this.pictureBox45.TabIndex = 109;
             this.pictureBox45.TabStop = false;
+            this.pictureBox45.Tag = "Black";
             this.pictureBox45.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox44
@@ -1337,14 +1356,15 @@
             // pictureBox43
             // 
             this.pictureBox43.BackColor = System.Drawing.Color.Black;
-            this.pictureBox43.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox43.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox43, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox43, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox43.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox43.Image")));
             this.pictureBox43.Location = new System.Drawing.Point(262, 191);
             this.pictureBox43.Name = "pictureBox43";
             this.pictureBox43.Size = new System.Drawing.Size(50, 50);
             this.pictureBox43.TabIndex = 107;
             this.pictureBox43.TabStop = false;
+            this.pictureBox43.Tag = "Black";
             this.pictureBox43.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox42
@@ -1361,27 +1381,29 @@
             // pictureBox41
             // 
             this.pictureBox41.BackColor = System.Drawing.Color.Black;
-            this.pictureBox41.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox41.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox41, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox41, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox41.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox41.Image")));
             this.pictureBox41.Location = new System.Drawing.Point(162, 191);
             this.pictureBox41.Name = "pictureBox41";
             this.pictureBox41.Size = new System.Drawing.Size(50, 50);
             this.pictureBox41.TabIndex = 105;
             this.pictureBox41.TabStop = false;
+            this.pictureBox41.Tag = "Black";
             this.pictureBox41.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox56
             // 
             this.pictureBox56.BackColor = System.Drawing.Color.Black;
-            this.pictureBox56.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox56.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox56, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox56, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox56.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox56.Image")));
             this.pictureBox56.Location = new System.Drawing.Point(512, 141);
             this.pictureBox56.Name = "pictureBox56";
             this.pictureBox56.Size = new System.Drawing.Size(50, 50);
             this.pictureBox56.TabIndex = 104;
             this.pictureBox56.TabStop = false;
+            this.pictureBox56.Tag = "Black";
             this.pictureBox56.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox55
@@ -1398,14 +1420,15 @@
             // pictureBox54
             // 
             this.pictureBox54.BackColor = System.Drawing.Color.Black;
-            this.pictureBox54.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox54.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox54, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox54, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox54.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox54.Image")));
             this.pictureBox54.Location = new System.Drawing.Point(412, 141);
             this.pictureBox54.Name = "pictureBox54";
             this.pictureBox54.Size = new System.Drawing.Size(50, 50);
             this.pictureBox54.TabIndex = 102;
             this.pictureBox54.TabStop = false;
+            this.pictureBox54.Tag = "Black";
             this.pictureBox54.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox53
@@ -1422,19 +1445,21 @@
             // pictureBox52
             // 
             this.pictureBox52.BackColor = System.Drawing.Color.Black;
-            this.pictureBox52.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox52.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox52, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox52, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox52.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox52.Image")));
             this.pictureBox52.Location = new System.Drawing.Point(312, 141);
             this.pictureBox52.Name = "pictureBox52";
             this.pictureBox52.Size = new System.Drawing.Size(50, 50);
             this.pictureBox52.TabIndex = 100;
             this.pictureBox52.TabStop = false;
+            this.pictureBox52.Tag = "Black";
             this.pictureBox52.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox51
             // 
             this.pictureBox51.BackColor = System.Drawing.Color.PeachPuff;
+            this.pictureBox51.Cursor = System.Windows.Forms.Cursors.Default;
             this.PanelAnimator2.SetDecoration(this.pictureBox51, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox51, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox51.Location = new System.Drawing.Point(262, 141);
@@ -1446,14 +1471,15 @@
             // pictureBox50
             // 
             this.pictureBox50.BackColor = System.Drawing.Color.Black;
-            this.pictureBox50.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox50.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox50, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox50, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox50.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox50.Image")));
             this.pictureBox50.Location = new System.Drawing.Point(212, 141);
             this.pictureBox50.Name = "pictureBox50";
             this.pictureBox50.Size = new System.Drawing.Size(50, 50);
             this.pictureBox50.TabIndex = 98;
             this.pictureBox50.TabStop = false;
+            this.pictureBox50.Tag = "Black";
             this.pictureBox50.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox49
@@ -1481,14 +1507,15 @@
             // pictureBox63
             // 
             this.pictureBox63.BackColor = System.Drawing.Color.Black;
-            this.pictureBox63.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox63.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox63, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox63, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox63.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox63.Image")));
             this.pictureBox63.Location = new System.Drawing.Point(462, 91);
             this.pictureBox63.Name = "pictureBox63";
             this.pictureBox63.Size = new System.Drawing.Size(50, 50);
             this.pictureBox63.TabIndex = 95;
             this.pictureBox63.TabStop = false;
+            this.pictureBox63.Tag = "Black";
             this.pictureBox63.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox62
@@ -1505,14 +1532,15 @@
             // pictureBox61
             // 
             this.pictureBox61.BackColor = System.Drawing.Color.Black;
-            this.pictureBox61.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox61.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox61, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox61, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox61.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox61.Image")));
             this.pictureBox61.Location = new System.Drawing.Point(362, 91);
             this.pictureBox61.Name = "pictureBox61";
             this.pictureBox61.Size = new System.Drawing.Size(50, 50);
             this.pictureBox61.TabIndex = 93;
             this.pictureBox61.TabStop = false;
+            this.pictureBox61.Tag = "Black";
             this.pictureBox61.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox60
@@ -1529,14 +1557,15 @@
             // pictureBox59
             // 
             this.pictureBox59.BackColor = System.Drawing.Color.Black;
-            this.pictureBox59.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox59.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox59, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox59, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox59.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox59.Image")));
             this.pictureBox59.Location = new System.Drawing.Point(262, 91);
             this.pictureBox59.Name = "pictureBox59";
             this.pictureBox59.Size = new System.Drawing.Size(50, 50);
             this.pictureBox59.TabIndex = 91;
             this.pictureBox59.TabStop = false;
+            this.pictureBox59.Tag = "Black";
             this.pictureBox59.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox58
@@ -1553,20 +1582,21 @@
             // pictureBox57
             // 
             this.pictureBox57.BackColor = System.Drawing.Color.Black;
-            this.pictureBox57.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox57.BackgroundImage")));
             this.PanelAnimator2.SetDecoration(this.pictureBox57, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox57, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox57.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox57.Image")));
             this.pictureBox57.Location = new System.Drawing.Point(162, 91);
             this.pictureBox57.Name = "pictureBox57";
             this.pictureBox57.Size = new System.Drawing.Size(50, 50);
             this.pictureBox57.TabIndex = 89;
             this.pictureBox57.TabStop = false;
+            this.pictureBox57.Tag = "Black";
             this.pictureBox57.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabClick);
             // 
             // pictureBox65
             // 
             this.pictureBox65.BackColor = System.Drawing.Color.SaddleBrown;
-            this.pictureBox65.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelAnimator2.SetDecoration(this.pictureBox65, BunifuAnimatorNS.DecorationType.None);
             this.PanelAnimator.SetDecoration(this.pictureBox65, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox65.Location = new System.Drawing.Point(142, 71);
@@ -1633,6 +1663,19 @@
             animation1.TransparencyCoeff = 0F;
             this.PanelAnimator2.DefaultAnimation = animation1;
             // 
+            // labelWin
+            // 
+            this.labelWin.AutoSize = true;
+            this.PanelAnimator2.SetDecoration(this.labelWin, BunifuAnimatorNS.DecorationType.None);
+            this.PanelAnimator.SetDecoration(this.labelWin, BunifuAnimatorNS.DecorationType.None);
+            this.labelWin.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWin.Location = new System.Drawing.Point(156, 23);
+            this.labelWin.Name = "labelWin";
+            this.labelWin.Size = new System.Drawing.Size(98, 33);
+            this.labelWin.TabIndex = 198;
+            this.labelWin.Text = "label1";
+            this.labelWin.Visible = false;
+            // 
             // ViewJogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1646,6 +1689,7 @@
             this.Name = "ViewJogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewJogo";
+            this.Load += new System.EventHandler(this.ViewJogo_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxplayer2)).EndInit();
@@ -1812,14 +1856,15 @@
         private System.Windows.Forms.Label labelL6;
         private System.Windows.Forms.Label labelL7;
         private System.Windows.Forms.Label labelL8;
-        private System.Windows.Forms.Label labelplayer2;
+        private System.Windows.Forms.Label labelplayerwhite;
         private System.Windows.Forms.PictureBox pictureBoxplayer2;
-        private System.Windows.Forms.Label labelplayer1;
+        private System.Windows.Forms.Label labelplayerblack;
         private System.Windows.Forms.PictureBox pictureBoxplayer1;
         private Bunifu.Framework.UI.BunifuFlatButton buttonMyProfileMenu;
         private Bunifu.Framework.UI.BunifuFlatButton buttonAboutMenu;
         private Bunifu.Framework.UI.BunifuFlatButton buttonRulesMenu;
         private Bunifu.Framework.UI.BunifuFlatButton buttonLogoutMenu;
         private System.Windows.Forms.ToolTip toolTipViewProfile;
+        private System.Windows.Forms.Label labelWin;
     }
 }

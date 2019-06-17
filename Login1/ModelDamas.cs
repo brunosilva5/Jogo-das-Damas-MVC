@@ -12,16 +12,15 @@ namespace CheckersGame
 {
     public class ModelDamas
     {
-        public event MetodosComSeisString AddPlayer;
-        public event MensagemErro msg;
-        public event MetodosSemParametros LoginSuccessful;
-
-        public event ListCountries CountriesComboBox;
-
         public ModelDamas()
         {
             
         }
+
+        public event MensagemErro msg;
+        public event MetodosSemParametros LoginSuccessful;
+
+        public event ListCountries CountriesComboBox;
 
         public bool IsValidEmail(string email)
         {
@@ -132,8 +131,9 @@ namespace CheckersGame
 
                 if (SecurePasswordHashed.Verify(password, dados["Password"].ToString()))
                 {
-                    if (AddPlayer != null) AddPlayer(dados["Name"].ToString(), dados["Username"].ToString(), dados["Password"].ToString(),
-                           dados["Country"].ToString(), dados["Email"].ToString(), dados["Photo"].ToString());
+                    Program.M_Tabuleiro.J.AddPlayer(dados["Name"].ToString(), dados["Username"].ToString(), dados["Password"].ToString(),
+                           dados["Country"].ToString(), dados["Email"].ToString(), dados["Photo"].ToString(), dados["NumGames"].ToString(), 
+                           dados["NumWins"].ToString(), dados["NumDefeats"].ToString(), dados["NumLeave"].ToString());
 
                     //fechar sempre a ligação ao servidor quando não é mais necessária
                     server.Close();
@@ -151,6 +151,8 @@ namespace CheckersGame
                 if (msg != null) msg("Username not found");
             }
         }
+
+
 
         public void Quit()
         {
