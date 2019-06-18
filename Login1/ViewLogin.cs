@@ -35,7 +35,7 @@ namespace CheckersGame
         private void M_Damas_LoginSuccessful()
         {
             this.Hide();
-            Program.V_ModoJogo.ShowDialog();
+            Program.V_Menu.ShowDialog();
         }
 
 

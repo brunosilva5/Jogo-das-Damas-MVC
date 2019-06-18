@@ -10,6 +10,7 @@ namespace CheckersGame
     {
         public static ViewLogin V_Login { get; private set; }
         public static ViewRegistar V_Registar { get; private set; }
+        public static ViewMenu V_Menu { get; private set; }
         public static ViewModoJogo V_ModoJogo { get; private set; }
         public static ViewJogo V_Jogo { get; private set; }
         public static ViewPerfil V_Perfil { get; private set; }
@@ -36,6 +37,7 @@ namespace CheckersGame
 
             V_Login = new ViewLogin();
             V_Registar = new ViewRegistar();
+            V_Menu = new ViewMenu();
             V_ModoJogo = new ViewModoJogo();
             V_Jogo = new ViewJogo();
             V_Perfil = new ViewPerfil();

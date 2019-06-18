@@ -15,12 +15,12 @@ namespace CheckersGame
         public string Country { get; set; }
         public string Email { get; set; }
 
-        public PReal(string name, string username, string password, string coutry, string email, string photo, string numgames, string numwins, string numdefeats, string numleave)
+        public PReal(string name, string username, string password, string country, string email, string photo, string numgames, string numwins, string numdefeats, string numleave)
         {
             this.Name = name;
             this.Username = username;
             this.Password = password;
-            this.Country = coutry;
+            this.Country = country;
             this.Email = email;
             this.Photo = Image.FromFile("Photos\\" + photo);
             this.NumGames = Convert.ToInt32(numgames);

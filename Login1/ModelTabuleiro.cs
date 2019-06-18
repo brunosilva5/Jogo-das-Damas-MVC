@@ -23,7 +23,6 @@ namespace CheckersGame
         public event MetodosSemParametros Vencedor;
 
         public int aux = 0;
-        public int Turn;
 
         public ModelTabuleiro()
         {
@@ -170,7 +169,11 @@ namespace CheckersGame
                     J.Players[0].NumDefeats = J.Players[0].NumDefeats + 1;
                 }
                 //Atualiza BD
-                UpdateDatabase();
+                UpdateDatabase(0);                            // Update database jogador 0
+                if (J.Game_Mode == Jogo.GAMEMODE.MULTIPLAYER) // Caso haja 2 players atualiza o segundo na bd
+                {
+                    //UpdateDatabase(1);                      // Update database jogador 1
+                }
 
                 return;//não será necessário o return
             }
@@ -182,12 +185,8 @@ namespace CheckersGame
 
 
 
-        public void UpdateDatabase()
+        public void UpdateDatabase(int Turn)
         {
-            if (J.Players[0].Turn) Turn = 0;
-
-            if (J.Players[1].Turn) Turn = 1;
-
             //para poder reutilizar a base de dados, caso contrário, ele está sempre a substituir
             var folder = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug", "");
 
@@ -201,7 +200,7 @@ namespace CheckersGame
             //abrir a ligação
             server.Open();
 
-            string cmdText = String.Format("UPDATE Users SET NumGames = '" + J.Players[Turn].NumGames.ToString() + "', NumWins = '" + J.Players[Turn].NumWins.ToString() + "', NumDefeats = '" + J.Players[Turn].NumDefeats.ToString() + "' WHERE Name = '" + J.Players[Turn].Name +"'");
+            string cmdText = String.Format("UPDATE Users SET NumGames = '" + J.Players[Turn].NumGames.ToString() + "', NumWins = '" + J.Players[Turn].NumWins.ToString() + "', NumDefeats = '" + J.Players[Turn].NumDefeats.ToString() + "' WHERE username = '" + (J.Players[Turn] as PReal).Username + "'");
             //construir o comando SQL com a ligação ao servidor
             SqlCommand command = new SqlCommand(cmdText, server);
             command.ExecuteNonQuery();

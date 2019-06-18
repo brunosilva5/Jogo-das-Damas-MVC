@@ -12,14 +12,18 @@ namespace CheckersGame
 {
     public partial class ViewPerfil : Form
     {
+        Jogo J { get; }
+        PReal P;
         public ViewPerfil()
         {
             InitializeComponent();
+            J = Program.M_Tabuleiro.J;
         }
 
         private void backbutton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Program.V_Menu.Visible = true;
+            this.Hide();
         }
 
         private void buttonUpdatePhoto_Click(object sender, EventArgs e)
@@ -28,9 +32,23 @@ namespace CheckersGame
             dlg.Filter = "Imagens |*.jpg|Todos os Ficheiros|*.*";   //filtrar
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                pictureBoxPerfil.ImageLocation = dlg.FileName;
-                pictureBoxPerfil.BackgroundImage = null;
+                pictureBoxProfile.ImageLocation = dlg.FileName;
+                pictureBoxProfile.BackgroundImage = null;
             }
+        }
+
+        private void ViewPerfil_Load(object sender, EventArgs e)
+        {
+            textBoxProfileName.Text = J.Players[0].Name;
+            textBoxProfileUserame.Text = (J.Players[0] as PReal).Username;
+            textBoxProfileCountry.Text = (J.Players[0] as PReal).Country;
+            textBoxProfileEmail.Text = (J.Players[0] as PReal).Email;
+            textBoxNumGames.Text = J.Players[0].NumGames.ToString();
+            textBoxNumWins.Text = J.Players[0].NumWins.ToString();
+            textBoxNumDefeats.Text = J.Players[0].NumDefeats.ToString();
+            textBoxNumLeave.Text = J.Players[0].NumLeave.ToString();
+            pictureBoxProfile.Image = (J.Players[0] as PReal).Photo;
+
         }
     }
 }

@@ -70,6 +70,12 @@
     <Compile Include="ControllerTabuleiro.cs" />
     <Compile Include="Delegate.cs" />
     <Compile Include="GuessPlayer.cs" />
+    <Compile Include="ViewMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMenu.Designer.cs">
+      <DependentUpon>ViewMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModelTabuleiro.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Jogo.cs" />
@@ -116,6 +122,9 @@
     <Compile Include="ViewRegistar.Designer.cs">
       <DependentUpon>ViewRegistar.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ViewMenu.resx">
+      <DependentUpon>ViewMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewAbout.resx">
       <DependentUpon>ViewAbout.cs</DependentUpon>
     </EmbeddedResource>
